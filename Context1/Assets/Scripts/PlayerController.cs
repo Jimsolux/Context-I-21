@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
 public class PlayerController : MonoBehaviour
 {
-    public Animator animator;
+    //public Animator animator;
 
-
-    public float acceleration;
+    //Player stats
+    private float playerSpeed;
     public float maxVelocity = 5;
-    public float jumpForce = 10;
+    private float jumpForce;
     private Rigidbody rb;
-    [SerializeField] private float moveVertical; // = Input.GetAxis("Vertical");
-    [SerializeField] float moveHorizontal;
+    private float moveVertical; 
+    private float moveHorizontal;
     public Transform groundChecker;
     //flip
     bool facingRight = true;
@@ -26,7 +27,10 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        animator = GetComponent<Animator>();
+        // animator = GetComponent<Animator>();
+        playerSpeed = GameManager.instance.playerSpeed;
+        jumpForce = GameManager.instance.jumpHeight;
+        maxVelocity = GameManager.instance.playerSpeed;
     }
     private void FixedUpdate()  // Runs before update.
     {
@@ -40,7 +44,7 @@ public class PlayerController : MonoBehaviour
         // rb.velocity = new Vector3(moveHorizontal * speed, rb.velocity.y, 0 );   // Determine velocity and apply to playerObject.
         var locVel = transform.InverseTransformDirection(rb.velocity);
 
-        locVel.x = moveHorizontal * acceleration;
+        locVel.x = moveHorizontal * playerSpeed;
         //locVel.y = rb.velocity.y;
         rb.velocity = transform.TransformDirection(locVel);
 
