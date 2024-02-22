@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
     //Player stats
     private float playerSpeed;
-    public float maxVelocity = 5;
+  //  public float maxVelocity = 5;
     private float jumpForce;
     private Rigidbody rb;
     private float moveVertical; 
@@ -28,9 +28,9 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         // animator = GetComponent<Animator>();
-        playerSpeed = GameManager.instance.playerSpeed;
-        jumpForce = GameManager.instance.jumpHeight;
-        maxVelocity = GameManager.instance.playerSpeed;
+        playerSpeed = Variables.GetPlayerSpeed();
+        jumpForce = Variables.GetJumpHeight();
+        //maxVelocity = Variables.GetPlayerSpeed();
     }
     private void FixedUpdate()  // Runs before update.
     {
@@ -48,15 +48,9 @@ public class PlayerController : MonoBehaviour
         //locVel.y = rb.velocity.y;
         rb.velocity = transform.TransformDirection(locVel);
 
-    /*
-       if (Mathf.Abs(locVel.x) < maxVelocity)
-        {
-            rb.AddForce(transform.right * acceleration * moveHorizontal);
-        }
-    */
+        //rb.velocity = Mathf.Clamp(rb.velocity, 0, 3);
         
 
-        //rb.velocity = Mathf.Clamp(rb.velocity, 0, 3);
 
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)  //if SPACE & player is on ground, makes player jump

@@ -7,8 +7,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     //Player variables
-    public float walkSpeed;
-    public float runSpeed;
+    public float walkSpeed = 5;
+    public float runSpeed = 10;
     public float playerSpeed;         // ACTUAL
     public float jumpHeight1;
     public float jumpHeight2;
@@ -16,6 +16,11 @@ public class GameManager : MonoBehaviour
 
     //Monster variables
 
+
+    void Awake()
+    {
+        instance = this;
+    }
     private void Start()
     {
         playerSpeed = walkSpeed;
