@@ -6,11 +6,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [Header("Interface variables")]
     [SerializeField] private PlayerInputManager inputManager;
+    private int activePlayers;
+
+    [Header("Interface variables")]
     [SerializeField] private GameObject canvasMain;
     [SerializeField] private GameObject[] connectionScreens;
-    private int activePlayers;
 
     [Header("Player variables")]
     public float walkSpeed = 5;
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
     public float jumpHeight2;
     public float jumpHeight;    // ACTUAL
 
+    public PlayerAction activeAction;
     //Monster variables
 
 
