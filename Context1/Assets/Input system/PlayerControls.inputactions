@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "ac4ba6e7-3ba5-40d7-b030-da133101e7d2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -33,7 +42,7 @@
                     "path": "<DualShockGamepad>/leftStick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Controls",
+                    "groups": "PlayStation",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -44,7 +53,7 @@
                     "path": "<DualShockGamepad>/leftStick/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Controls",
+                    "groups": "PlayStation",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -55,7 +64,7 @@
                     "path": "<DualShockGamepad>/leftStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Controls",
+                    "groups": "PlayStation",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -66,7 +75,7 @@
                     "path": "<DualShockGamepad>/leftStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Controls",
+                    "groups": "PlayStation",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -235,14 +244,58 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "7335f095-8be7-4c48-a224-cb01071544bb",
+                    "path": "<DualShockGamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayStation",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f0f2995f-f0f0-46db-8435-d1b3b8ec1889",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "85a1078b-6a79-456b-92b3-3e213a69fccd",
+                    "path": "<XInputController>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5d99bfc6-bff4-4921-8508-4990e77d8b3d",
+                    "path": "<SwitchProControllerHID>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Switch",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
     ],
     "controlSchemes": [
         {
-            "name": "Controls",
-            "bindingGroup": "Controls",
+            "name": "PlayStation",
+            "bindingGroup": "PlayStation",
             "devices": [
                 {
                     "devicePath": "<DualShockGamepad>",
