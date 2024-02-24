@@ -127,3 +127,10 @@ public static class Variables
     }
     #endregion
 }
+
+public enum PlayerRole
+{
+    Artist,
+    Developer,
+    Designer
+}
