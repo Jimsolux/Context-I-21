@@ -291,7 +291,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 850af5c4aec22e345b61f41444694338, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
   targetCamera: {fileID: 3354342560348555178}
 --- !u!70 &9167409498797394969
 CapsuleCollider2D:

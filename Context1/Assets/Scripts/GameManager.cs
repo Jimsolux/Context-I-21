@@ -41,14 +41,14 @@ public class GameManager : MonoBehaviour
     {
         try
         {
-            int activePlayers = inputManager.playerCount;
+            // The - 1 is due to computer language mumbo jumbo.
+            int activePlayers = inputManager.playerCount - 1;
 
             PlayerRole role = (PlayerRole)activePlayers;
 
             player.Setup(role, activePlayers);
 
-            // The - 1 is due to computer language mumbo jumbo, otherwise it takes wrong ID.
-            connectionScreens[activePlayers - 1].SetActive(false);
+            connectionScreens[activePlayers].SetActive(false);
         }
         catch {
             Debug.LogError("Player has not been instantiated with the input manager"); 
