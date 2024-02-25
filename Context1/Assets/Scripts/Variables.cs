@@ -116,14 +116,41 @@ public static class Variables
     public static float GetJumpHeight()
     {
         try { return GameManager.instance.jumpHeight; }
-        catch (Exception e) { Debug.LogWarning("Could not get variable from JumpHeight(); " + e); }
+        catch (Exception e) { Debug.LogWarning("Could not get variable from GetJumpHeight(); " + e); }
         return 0;
     }
 
     public static void SetJumpHeight(float value)
     {
         try { GameManager.instance.jumpHeight = value; }
-        catch (Exception e) { Debug.LogWarning("Could not set variable from JumpHeight(); " + e); }
+        catch (Exception e) { Debug.LogWarning("Could not set variable from SetJumpHeight(); " + e); }
     }
     #endregion
+
+    #region activeAction
+    public static PlayerAction GetActiveAction()
+    {
+        try { return GameManager.instance.activeAction; }
+        catch (Exception e) { Debug.LogWarning("Could not get variable from GetActiveAction(); " + e); }
+        return 0;
+    }
+
+    public static void SetActiveAction(PlayerAction value)
+    {
+        try { GameManager.instance.activeAction = value; }
+        catch (Exception e) { Debug.LogWarning("Could not set variable from SetActiveAction(); " + e); }
+    }
+    #endregion
+}
+
+public enum PlayerRole
+{
+    Artist,
+    Developer,
+    Designer
+}
+
+public enum PlayerAction
+{
+    Jump
 }
