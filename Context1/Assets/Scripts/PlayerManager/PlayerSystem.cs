@@ -91,6 +91,14 @@ public class PlayerSystem : MonoBehaviour
         }
     }
 
+    public void UseAbility(InputAction.CallbackContext context)
+    {
+        if (context.action.WasPerformedThisFrame())
+        {
+            GameManager.instance.UseAbility(role);
+        }
+    }
+
     #region jumping
     private void Jump()
     {

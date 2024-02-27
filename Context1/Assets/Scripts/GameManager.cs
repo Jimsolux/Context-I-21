@@ -50,6 +50,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void UseAbility(PlayerRole role)
+    {
+
+    }
+
     public void ChangeAbility(PlayerRole role, int swapDir)
     {
         int index = 0;
@@ -101,6 +106,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    #region dev abilities
     public void SwapSpeed() // Change players speed
     {
         if (playerSpeed == runSpeed) playerSpeed = walkSpeed;
@@ -137,6 +143,5 @@ public class GameManager : MonoBehaviour
             case GravityDirectionEnum.Right: Physics.gravity = right; break;
         }
     }
-
-
+    #endregion
 }
