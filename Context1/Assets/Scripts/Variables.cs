@@ -155,3 +155,24 @@ public enum PlayerAction
     Jump,
     Hit
 }
+
+public enum DevAbilitiesEnum
+{
+    GravitySwap, 
+    AdjustJump, 
+    AdjustSpeed
+}
+
+public enum ArtAbilitiesEnum
+{
+    Good,
+    Bad
+}
+
+public enum GravityDirectionEnum
+{
+    Down,
+    Left,
+    Up,
+    Right    
+}

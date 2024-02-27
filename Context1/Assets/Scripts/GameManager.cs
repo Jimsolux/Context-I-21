@@ -67,4 +67,22 @@ public class GameManager : MonoBehaviour
         if (jumpHeight == jumpHeight1) jumpHeight = jumpHeight2;
         if (jumpHeight == jumpHeight2) jumpHeight = jumpHeight1;
     }
+
+
+    public GravityDirectionEnum gravityDirection;
+    public void GravitySwap()
+    {
+        Vector3 up = new Vector3(0, 9.81f, 0);
+        Vector3 right = new Vector3(9.81f, 0, 0);
+        Vector3 down = new Vector3(0, -9.81f, 0);
+        Vector3 left = new Vector3(-9.81f, 0, 0);
+
+        switch (gravityDirection)
+        {
+            case GravityDirectionEnum.Down: Physics.gravity = down; break;
+            case GravityDirectionEnum.Left: Physics.gravity = left; break;
+            case GravityDirectionEnum.Up: Physics.gravity = up; break;
+            case GravityDirectionEnum.Right: Physics.gravity = right; break;
+        }
+    }
 }

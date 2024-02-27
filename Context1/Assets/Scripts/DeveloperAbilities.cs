@@ -17,18 +17,18 @@ public class DeveloperAbilities : MonoBehaviour
     int abilitiesCaseNr = 0;
 
 
-    public enum AbilitiesEnum
+    public enum DevAbilitiesEnum
     {
         gravitySwap, adjustJump, adjustSpeed
     }
-    public AbilitiesEnum Abilities;
+    public DevAbilitiesEnum Abilities;
     private void CheckAbilityState()
     {
         switch (Abilities)     // AbilityState Behaviour
         {
-            case AbilitiesEnum.gravitySwap: SwapGravity(); break;
-            case AbilitiesEnum.adjustJump: JumpAdjust(); break;
-            case AbilitiesEnum.adjustSpeed: SpeedAdjust(); break;
+            case DevAbilitiesEnum.gravitySwap: SwapGravity(); break;
+            case DevAbilitiesEnum.adjustJump: JumpAdjust(); break;
+            case DevAbilitiesEnum.adjustSpeed: SpeedAdjust(); break;
         }
 
         switch (abilitiesCaseNr)// Cycle through states.
