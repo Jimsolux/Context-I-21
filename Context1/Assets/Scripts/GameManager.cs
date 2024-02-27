@@ -160,10 +160,13 @@ public class GameManager : MonoBehaviour
         jumpHeightBool = !jumpHeightBool;
     }
 
+    private bool runSpeedBool = true;
     public void AdjustSpeed() // Change players speed
     {
-        if (playerSpeed == runSpeed) playerSpeed = walkSpeed;
-        if (playerSpeed == walkSpeed) playerSpeed = runSpeed;
+        if (runSpeedBool) playerSpeed = runSpeed;
+        if (!runSpeedBool) playerSpeed = walkSpeed;
+
+        runSpeedBool = !runSpeedBool;
     }
 
     #endregion
