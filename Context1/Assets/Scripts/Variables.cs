@@ -169,7 +169,7 @@ public enum ArtAbilitiesEnum
     Bad
 }
 
-public enum DesignerAbilitiesEnum
+public enum DesAbilitiesEnum
 {
 
 }

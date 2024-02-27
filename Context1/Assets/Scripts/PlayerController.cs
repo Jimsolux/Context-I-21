@@ -45,9 +45,9 @@ public class PlayerController : MonoBehaviour
         var locVel = transform.InverseTransformDirection(rb.velocity);
 
         locVel.x = moveHorizontal * playerSpeed;
-        //locVel.y = rb.velocity.y;
         rb.velocity = transform.TransformDirection(locVel);
 
+        //locVel.y = rb.velocity.y;
         //rb.velocity = Mathf.Clamp(rb.velocity, 0, 3);
         
 

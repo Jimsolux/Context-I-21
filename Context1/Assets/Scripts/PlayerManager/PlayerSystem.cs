@@ -80,12 +80,14 @@ public class PlayerSystem : MonoBehaviour
     {
         if (context.action.WasPerformedThisFrame())
         {
+            GameManager.instance.ChangeAbility(role, 1);
         }
     }
     public void PreviousAbility(InputAction.CallbackContext context)
     {
         if (context.action.WasPerformedThisFrame())
         {
+            GameManager.instance.ChangeAbility(role, -1);
         }
     }
 

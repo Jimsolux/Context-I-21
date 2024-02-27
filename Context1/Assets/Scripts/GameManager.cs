@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     public float jumpHeight;    // ACTUAL
 
     public PlayerAction activeAction;
+
+    public DevAbilitiesEnum devAbilities;
+    public DesAbilitiesEnum desAbilities;
+    public ArtAbilitiesEnum artAbilities;
     //Monster variables
 
 
@@ -43,6 +47,38 @@ public class GameManager : MonoBehaviour
         if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
         {
             GravitySwap();
+        }
+    }
+
+    public void ChangeAbility(PlayerRole role, int swapDir)
+    {
+        int index = 0;
+
+        switch(role)
+        {
+            case PlayerRole.Developer:
+                index = (int)devAbilities + swapDir;
+
+                if (index >= Enum.GetValues(typeof(DevAbilitiesEnum)).Length) index = 0;    //Max Index reset
+                if (index < 0) index = Enum.GetValues(typeof(DevAbilitiesEnum)).Length - 1; //Min Index reset
+                devAbilities = (DevAbilitiesEnum)index; // Sets the active devAbility to the index.
+                break;
+
+            case PlayerRole.Designer:
+                index = (int)desAbilities + swapDir;
+
+                if (index >= Enum.GetValues(typeof(DesAbilitiesEnum)).Length) index = 0;    //Max Index reset
+                if (index < 0) index = Enum.GetValues(typeof(DesAbilitiesEnum)).Length - 1; //Min Index reset
+                desAbilities = (DesAbilitiesEnum)index;// Sets the active desAbility to the index.
+                break;
+
+            case PlayerRole.Artist:
+                index = (int)artAbilities + swapDir;
+
+                if (index >= Enum.GetValues(typeof(ArtAbilitiesEnum)).Length) index = 0;    //Max Index reset
+                if (index < 0) index = Enum.GetValues(typeof(ArtAbilitiesEnum)).Length - 1; //Min Index reset
+                artAbilities = (ArtAbilitiesEnum)index;// Sets the active desAbility to the index.
+                break;
         }
     }
 
@@ -101,4 +137,6 @@ public class GameManager : MonoBehaviour
             case GravityDirectionEnum.Right: Physics.gravity = right; break;
         }
     }
+
+
 }
