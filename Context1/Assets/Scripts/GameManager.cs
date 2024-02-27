@@ -151,10 +151,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private bool jumpHeightBool = true;
     public void AdjustJump() // Change players jumpheight
     {
-        if (jumpHeight == jumpHeight1) jumpHeight = jumpHeight2;
-        if (jumpHeight == jumpHeight2) jumpHeight = jumpHeight1;
+        if (jumpHeightBool) jumpHeight = jumpHeight2;
+        if (!jumpHeightBool) jumpHeight = jumpHeight1;
+
+        jumpHeightBool = !jumpHeightBool;
     }
 
     public void AdjustSpeed() // Change players speed
