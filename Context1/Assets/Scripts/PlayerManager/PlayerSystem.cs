@@ -76,6 +76,19 @@ public class PlayerSystem : MonoBehaviour
         }
     }
 
+    public void NextAbility(InputAction.CallbackContext context)
+    {
+        if (context.action.WasPerformedThisFrame())
+        {
+        }
+    }
+    public void PreviousAbility(InputAction.CallbackContext context)
+    {
+        if (context.action.WasPerformedThisFrame())
+        {
+        }
+    }
+
     #region jumping
     private void Jump()
     {

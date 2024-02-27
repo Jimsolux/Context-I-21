@@ -275,6 +275,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ac4ba6e7-3ba5-40d7-b030-da133101e7d2
     m_ActionName: Controls/Interact[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2485967161654850715}
+        m_TargetAssemblyTypeName: PlayerSystem, Assembly-CSharp
+        m_MethodName: NextAbility
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 55c39d85-1038-4d3e-b1e0-e4fccf1fdd7d
+    m_ActionName: Controls/Next Action[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2485967161654850715}
+        m_TargetAssemblyTypeName: PlayerSystem, Assembly-CSharp
+        m_MethodName: PreviousAbility
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6fb46f7c-a928-4b34-9a2f-91ac60185f4e
+    m_ActionName: Controls/Previous Action[/Mouse/leftButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Controls
@@ -309,6 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d78434f1e9c5eb4a965da6b85e64d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  role: 0
 --- !u!54 &2736348461678677456
 Rigidbody:
   m_ObjectHideFlags: 0
