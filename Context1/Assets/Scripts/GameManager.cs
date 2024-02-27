@@ -52,7 +52,27 @@ public class GameManager : MonoBehaviour
 
     public void UseAbility(PlayerRole role)
     {
+        switch (role)
+        {
+            case PlayerRole.Artist: 
+                
+                break;
+            case PlayerRole.Developer:
+                switch (devAbilities)
+                {
+                    case DevAbilitiesEnum.GravitySwap:GravitySwap();
+                        break;
+                    case DevAbilitiesEnum.AdjustJump: AdjustJump();
+                        break;
+                    case DevAbilitiesEnum.AdjustSpeed: AdjustSpeed();
+                        break;
+                }
 
+                break;
+            case PlayerRole.Designer: 
+                
+                break;
+        }
     }
 
     public void ChangeAbility(PlayerRole role, int swapDir)
@@ -107,19 +127,6 @@ public class GameManager : MonoBehaviour
     }
 
     #region dev abilities
-    public void SwapSpeed() // Change players speed
-    {
-        if (playerSpeed == runSpeed) playerSpeed = walkSpeed;
-        if (playerSpeed == walkSpeed) playerSpeed = runSpeed;
-    }
-
-    public void SwapJump() // Change players jumpheight
-    {
-        if (jumpHeight == jumpHeight1) jumpHeight = jumpHeight2;
-        if (jumpHeight == jumpHeight2) jumpHeight = jumpHeight1;
-    }
-
-
     public GravityDirectionEnum gravityDirection;
     public void GravitySwap()
     {
@@ -143,5 +150,18 @@ public class GameManager : MonoBehaviour
             case GravityDirectionEnum.Right: Physics.gravity = right; break;
         }
     }
+
+    public void AdjustJump() // Change players jumpheight
+    {
+        if (jumpHeight == jumpHeight1) jumpHeight = jumpHeight2;
+        if (jumpHeight == jumpHeight2) jumpHeight = jumpHeight1;
+    }
+
+    public void AdjustSpeed() // Change players speed
+    {
+        if (playerSpeed == runSpeed) playerSpeed = walkSpeed;
+        if (playerSpeed == walkSpeed) playerSpeed = runSpeed;
+    }
+
     #endregion
 }
