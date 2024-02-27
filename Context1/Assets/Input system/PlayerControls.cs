@@ -62,6 +62,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Perform Action"",
+                    ""type"": ""Button"",
+                    ""id"": ""e203e5e3-25ce-41a0-84fe-c06680eeb4c1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -376,7 +385,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7335f095-8be7-4c48-a224-cb01071544bb"",
-                    ""path"": ""<DualShockGamepad>/buttonEast"",
+                    ""path"": ""<DualShockGamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""PlayStation"",
@@ -398,7 +407,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""85a1078b-6a79-456b-92b3-3e213a69fccd"",
-                    ""path"": ""<XInputController>/buttonEast"",
+                    ""path"": ""<XInputController>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Xbox"",
@@ -414,6 +423,50 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Switch"",
                     ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3dc39d2d-d770-4250-9eb5-a1501533908a"",
+                    ""path"": ""<DualShockGamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""PlayStation"",
+                    ""action"": ""Perform Action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7122069f-ca28-4035-b2b6-3f0a3c6177df"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard"",
+                    ""action"": ""Perform Action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2e0f8755-b0dc-4eb2-adc2-3946ea7fac10"",
+                    ""path"": ""<XInputController>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Xbox"",
+                    ""action"": ""Perform Action"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bd7a5a25-4408-4cc1-97f0-0b6e6decfb52"",
+                    ""path"": ""<SwitchProControllerHID>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Perform Action"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -473,6 +526,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Controls_Interact = m_Controls.FindAction("Interact", throwIfNotFound: true);
         m_Controls_NextAction = m_Controls.FindAction("Next Action", throwIfNotFound: true);
         m_Controls_PreviousAction = m_Controls.FindAction("Previous Action", throwIfNotFound: true);
+        m_Controls_PerformAction = m_Controls.FindAction("Perform Action", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -538,6 +592,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_Interact;
     private readonly InputAction m_Controls_NextAction;
     private readonly InputAction m_Controls_PreviousAction;
+    private readonly InputAction m_Controls_PerformAction;
     public struct ControlsActions
     {
         private @PlayerControls m_Wrapper;
@@ -546,6 +601,7 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Controls_Interact;
         public InputAction @NextAction => m_Wrapper.m_Controls_NextAction;
         public InputAction @PreviousAction => m_Wrapper.m_Controls_PreviousAction;
+        public InputAction @PerformAction => m_Wrapper.m_Controls_PerformAction;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -567,6 +623,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @PreviousAction.started += instance.OnPreviousAction;
             @PreviousAction.performed += instance.OnPreviousAction;
             @PreviousAction.canceled += instance.OnPreviousAction;
+            @PerformAction.started += instance.OnPerformAction;
+            @PerformAction.performed += instance.OnPerformAction;
+            @PerformAction.canceled += instance.OnPerformAction;
         }
 
         private void UnregisterCallbacks(IControlsActions instance)
@@ -583,6 +642,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @PreviousAction.started -= instance.OnPreviousAction;
             @PreviousAction.performed -= instance.OnPreviousAction;
             @PreviousAction.canceled -= instance.OnPreviousAction;
+            @PerformAction.started -= instance.OnPerformAction;
+            @PerformAction.performed -= instance.OnPerformAction;
+            @PerformAction.canceled -= instance.OnPerformAction;
         }
 
         public void RemoveCallbacks(IControlsActions instance)
@@ -642,5 +704,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnNextAction(InputAction.CallbackContext context);
         void OnPreviousAction(InputAction.CallbackContext context);
+        void OnPerformAction(InputAction.CallbackContext context);
     }
 }
