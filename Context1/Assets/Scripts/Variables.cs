@@ -152,5 +152,6 @@ public enum PlayerRole
 
 public enum PlayerAction
 {
-    Jump
+    Jump,
+    Hit
 }
