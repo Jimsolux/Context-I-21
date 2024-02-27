@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 
 public class DeveloperAbilities : MonoBehaviour
 {
-
+    /*
     int gravityDirection = 0;
     float gravity = 9.81f;
     float rot = 0;
@@ -124,5 +124,5 @@ public class DeveloperAbilities : MonoBehaviour
             coolDownReset = true;
             return;
         }
-    }
+    }*/
 }

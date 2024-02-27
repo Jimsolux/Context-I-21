@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class GameManager : MonoBehaviour
 {
@@ -35,6 +36,14 @@ public class GameManager : MonoBehaviour
     {
         playerSpeed = walkSpeed;
         jumpHeight = jumpHeight1;
+    }
+
+    private void Update()
+    {
+        if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
+        {
+            GravitySwap();
+        }
     }
 
     public void AddPlayer(PlayerSystem player)
@@ -76,6 +85,13 @@ public class GameManager : MonoBehaviour
         Vector3 right = new Vector3(9.81f, 0, 0);
         Vector3 down = new Vector3(0, -9.81f, 0);
         Vector3 left = new Vector3(-9.81f, 0, 0);
+
+        int gravityDirectionInt = (int)gravityDirection + 1;
+
+        if (gravityDirectionInt >= 4)
+            gravityDirectionInt = 0;
+
+        gravityDirection = (GravityDirectionEnum)gravityDirectionInt;
 
         switch (gravityDirection)
         {
