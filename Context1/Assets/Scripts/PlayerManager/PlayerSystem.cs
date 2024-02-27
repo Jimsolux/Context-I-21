@@ -36,6 +36,10 @@ public class PlayerSystem : MonoBehaviour
         Debug.Log("New player connected; " + role + ", with ID " + ID);
         role = myRole;
         ID = myID;
+        if (GetComponent<PlayerRoleOverwrite>() != null)
+        {
+            role = GetComponent<PlayerRoleOverwrite>().role;
+        }
     }
 
     private void Update()
