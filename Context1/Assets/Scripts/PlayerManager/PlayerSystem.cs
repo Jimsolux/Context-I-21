@@ -10,7 +10,7 @@ public class PlayerSystem : MonoBehaviour
     private int ID;
 
     // physics stuff
-    private Rigidbody2D rb;
+    private Rigidbody rb;
 
     // Mechanics stuff
     // Walking
@@ -28,7 +28,7 @@ public class PlayerSystem : MonoBehaviour
     {
         targetCamera.parent = null;
         GameManager.instance.AddPlayer(this);
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody>();
     }
 
     public void Setup(PlayerRole myRole, int myID)
@@ -77,7 +77,7 @@ public class PlayerSystem : MonoBehaviour
     {
         if (onCoyoteTime && !jumping)
         {
-            rb.AddForce(transform.up * Variables.GetJumpHeight(), ForceMode2D.Impulse);
+            rb.AddForce(transform.up * Variables.GetJumpHeight(), ForceMode.Impulse);
             currentCoyoteTime = 0;
             jumping = true;
         }
@@ -100,7 +100,7 @@ public class PlayerSystem : MonoBehaviour
 
     private bool IsGrounded()
     {
-        if (Physics2D.Raycast(transform.position, transform.up * -1, groundDistance, groundMask))
+        if (Physics.Raycast(transform.position, transform.up * -1, groundDistance, groundMask))
         {
             return true;
         }
