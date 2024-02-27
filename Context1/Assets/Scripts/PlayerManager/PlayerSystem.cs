@@ -19,7 +19,7 @@ public class PlayerSystem : MonoBehaviour
     // Jumping
     private bool jumping;
     [SerializeField] private LayerMask groundMask;
-    private float groundDistance = 0.6f;
+    private float groundDistance = 0.51f;
     [SerializeField] private float coyoteTime = 0.1f; // The time the player can still jump after they are no longer grounded
     private float currentCoyoteTime = 0f;
     private bool onCoyoteTime = false;
@@ -106,6 +106,7 @@ public class PlayerSystem : MonoBehaviour
         {
             rb.AddForce(transform.up * Variables.GetJumpHeight(), ForceMode.Impulse);
             currentCoyoteTime = 0;
+            onCoyoteTime = false;
             jumping = true;
         }
     }
