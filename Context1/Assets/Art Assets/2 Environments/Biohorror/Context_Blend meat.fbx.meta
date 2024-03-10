@@ -3,7 +3,47 @@ guid: 10c5c4824b0848e43aaab06e5b79d0e5
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bone
+    second: {fileID: 2100000, guid: 0cbd6566f421e0a4981d093be7b5730d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bone Baked
+    second: {fileID: 2100000, guid: 0cbd6566f421e0a4981d093be7b5730d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MeatCubeBaked
+    second: {fileID: 2100000, guid: bfea250a9b0f9f940acdc305206956ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MeatCubeLongBaked
+    second: {fileID: 2100000, guid: 2dae5e91252474d478f540acc5777b10, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MeatCubeLongSlope
+    second: {fileID: 2100000, guid: b89d45a6701461d45be06e23b98330c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rib Baked
+    second: {fileID: 2100000, guid: 3e2b3f88bccb87349a7d44a13b374cdc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SkinBoxLong
+    second: {fileID: 2100000, guid: 76d5569333883d04d888be68fb941b53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SkinCube
+    second: {fileID: 2100000, guid: e09b6a374e19a2a42b9ac6aa73fae6d4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
