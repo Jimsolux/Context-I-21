@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -27,6 +28,8 @@ public class GameManager : MonoBehaviour
     public DevAbilitiesEnum devAbilities;
     public DesAbilitiesEnum desAbilities;
     public ArtAbilitiesEnum artAbilities;
+
+    [SerializeField] private SceneSwitchDebug sceneSwitcher;
     //Monster variables
 
 
@@ -69,9 +72,18 @@ public class GameManager : MonoBehaviour
                 }
 
                 break;
-            case PlayerRole.Designer: 
-                
+            case PlayerRole.Designer:
+                switch (desAbilities)
+                {
+                    case DesAbilitiesEnum.Jump:;
+                        break;
+                    case DesAbilitiesEnum.Attack:;
+                        break;
+                    case DesAbilitiesEnum.Interact:;
+                        break;
+                }
                 break;
+           
         }
     }
 
@@ -167,6 +179,36 @@ public class GameManager : MonoBehaviour
         if (!runSpeedBool) playerSpeed = walkSpeed;
 
         runSpeedBool = !runSpeedBool;
+    }
+
+    #endregion
+
+    #region des abilities
+
+    public void Attack()
+    {
+
+    }
+
+    public void Jump()
+    {
+       // PlayerSystem player;
+
+
+
+    }
+
+    public void Interact()
+    {
+
+    }
+    #endregion
+
+    #region artAbility
+
+    public void SwapMood()
+    {
+        sceneSwitcher.SwapMood();
     }
 
     #endregion

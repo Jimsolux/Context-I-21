@@ -6,26 +6,47 @@ public class SceneSwitchDebug : MonoBehaviour
 {
     // let niet op de namen van de variables, dit is letterlijk gwn voor testen
 
-    public GameObject cuteUwU;
-    public GameObject spoopyOwO;
+    public GameObject playGround;
+    public GameObject bioHorror;
 
-    bool activeCute;
-    void Update()
+    bool currentlyPlayground;
+
+    private void Start()
     {
-        if(activeCute)
-        {
-            cuteUwU.SetActive(true);
-            spoopyOwO.SetActive(false);
-        }
-        else
-        {
-            cuteUwU.SetActive(false);
-            spoopyOwO.SetActive(true);
-        }
+        currentlyPlayground = true;
+    }
+    //void Update()
+    //{
+    //    if(currentlyPlayground)
+    //    {
+    //        playGround.SetActive(true);
+    //        bioHorror.SetActive(false);
+    //    }
+    //    else
+    //    {
+    //        playGround.SetActive(false);
+    //        bioHorror.SetActive(true);
+    //    }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+    //    if (Input.GetKeyDown(KeyCode.Q))
+    //    {
+    //        currentlyPlayground = !currentlyPlayground;
+    //    }
+    //}
+
+    public void SwapMood()
+    {
+        switch (currentlyPlayground)    // Checks if its playground and swaps it with Biohorror or the other way around
         {
-            activeCute = !activeCute;
+            case false: // Its not playground --> becomes playGround
+                playGround.SetActive(true);
+                bioHorror.SetActive(false);
+                currentlyPlayground =true; 
+                break;
+            case true:  // Its playground --> Becomes biohorror
+                playGround.SetActive(false);
+                bioHorror.SetActive(true);
+                currentlyPlayground =false; break;
         }
     }
 }

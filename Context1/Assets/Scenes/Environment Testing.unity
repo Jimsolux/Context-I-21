@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0270ed9feb953d741ad88494018d7104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cuteUwU: {fileID: 1701287664}
-  spoopyOwO: {fileID: 540815094}
+  playGround: {fileID: 0}
+  bioHorror: {fileID: 0}
 --- !u!4 &22520644
 Transform:
   m_ObjectHideFlags: 0
@@ -1029,7 +1029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &540815095
 Transform:
   m_ObjectHideFlags: 0
@@ -2787,7 +2787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1701287665
 Transform:
   m_ObjectHideFlags: 0

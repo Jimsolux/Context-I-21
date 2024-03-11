@@ -67,10 +67,16 @@ public class PlayerSystem : MonoBehaviour
     {
         if (context.action.WasPressedThisFrame())
         {
-            switch (Variables.GetActiveAction())
+            switch (GameManager.instance.desAbilities)
             {
-                case PlayerAction.Jump:
+                case DesAbilitiesEnum.Jump:
                     Jump();
+                    break;
+                case DesAbilitiesEnum.Attack:
+                    Attack();
+                    break;
+                case DesAbilitiesEnum.Interact:
+                    DesInteract();
                     break;
             }
         }
@@ -133,6 +139,18 @@ public class PlayerSystem : MonoBehaviour
             return true;
         }
         return false;
+    }
+    #endregion
+
+    #region other des Abilities
+    private void Attack()
+    {
+
+    }
+
+    private void DesInteract()
+    {
+
     }
     #endregion
 }

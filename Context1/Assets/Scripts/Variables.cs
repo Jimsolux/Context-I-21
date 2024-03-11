@@ -165,13 +165,14 @@ public enum DevAbilitiesEnum
 
 public enum ArtAbilitiesEnum
 {
-    Good,
-    Bad
+    SwitchMood
 }
 
 public enum DesAbilitiesEnum
 {
-
+    Jump,
+    Attack,
+    Interact
 }
 
 public enum GravityDirectionEnum
