@@ -59,9 +59,18 @@ public class PlayerSystem : MonoBehaviour
 
     private void UpdatePosition()
     {
-        float dirX = direction.x;
-        Vector3 v3Dir = new(dirX, 0, 0);
-        transform.position += v3Dir * Variables.GetPlayerSpeed() * Time.deltaTime;
+        if (GameManager.instance.sidewaysControls)
+        {
+            float dirY = direction.y;
+            Vector3 v3Dir = new(0, dirY, 0);
+            transform.position += v3Dir * Variables.GetPlayerSpeed() * Time.deltaTime;
+        }
+        else
+        {
+            float dirX = direction.x;
+            Vector3 v3Dir = new(dirX, 0, 0);
+            transform.position += v3Dir * Variables.GetPlayerSpeed() * Time.deltaTime;
+        }
     }
     #endregion
 
