@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3354342560348555178}
   - component: {fileID: 180601907207183965}
   - component: {fileID: 4556696301494466536}
+  - component: {fileID: 8999992844691925768}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: Untagged
@@ -128,6 +129,18 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &8999992844691925768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740869396511501905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb056ee1f7e72dc40a7d70dad9d3ca15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3993242024720000270
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +220,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -341,6 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 3354342560348555178}
+  rotateSpeed: 200
   groundMask:
     serializedVersion: 2
     m_Bits: 8

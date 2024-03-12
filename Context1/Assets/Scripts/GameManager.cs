@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public DevAbilitiesEnum devAbilities;
     public DesAbilitiesEnum desAbilities;
     public ArtAbilitiesEnum artAbilities;
+    public Quaternion targetRotation = Quaternion.Euler(0, 0, 0);
 
     [SerializeField] private SceneSwitchDebug sceneSwitcher;
     //Monster variables
@@ -156,10 +157,21 @@ public class GameManager : MonoBehaviour
 
         switch (gravityDirection)
         {
-            case GravityDirectionEnum.Down: Physics.gravity = down; break;
-            case GravityDirectionEnum.Left: Physics.gravity = left; break;
-            case GravityDirectionEnum.Up: Physics.gravity = up; break;
-            case GravityDirectionEnum.Right: Physics.gravity = right; break;
+            case GravityDirectionEnum.Down: Physics.gravity = down;
+                targetRotation = Quaternion.Euler(0, 0, 0);
+                break;
+            case GravityDirectionEnum.Left: Physics.gravity = left;
+                targetRotation = Quaternion.Euler(0, 0, -90);
+
+                break;
+            case GravityDirectionEnum.Up: Physics.gravity = up;
+                targetRotation = Quaternion.Euler(0, 0, 180);
+
+                break;
+            case GravityDirectionEnum.Right: Physics.gravity = right;
+                targetRotation = Quaternion.Euler(0, 0, 90);
+
+                break;
         }
     }
 

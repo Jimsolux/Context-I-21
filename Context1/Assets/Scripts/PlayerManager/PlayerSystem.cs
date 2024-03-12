@@ -11,7 +11,7 @@ public class PlayerSystem : MonoBehaviour
 
     // physics stuff
     private Rigidbody rb;
-
+    [SerializeField] private float rotateSpeed = 200;
     // Mechanics stuff
     // Walking
     private Vector2 direction;
@@ -46,6 +46,8 @@ public class PlayerSystem : MonoBehaviour
     {
         UpdatePosition(); // this updates player position according to movement input
 
+        RotatePlayer();
+
         CoyoteTime();
     }
 
@@ -62,6 +64,12 @@ public class PlayerSystem : MonoBehaviour
         transform.position += v3Dir * Variables.GetPlayerSpeed() * Time.deltaTime;
     }
     #endregion
+
+    private void RotatePlayer()
+    {
+        transform.localRotation = Quaternion.RotateTowards(transform.localRotation, GameManager.instance.targetRotation, Time.deltaTime * rotateSpeed);
+    }
+
 
     public void OnAction(InputAction.CallbackContext context)
     {
