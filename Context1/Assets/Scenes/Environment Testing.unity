@@ -1364,7 +1364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 8
-  meshRenderer: {fileID: 4022899942930099935}
+  meshRenderer: {fileID: 6959691199590030898}
 --- !u!65 &1089096357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2115,7 +2115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 8
-  meshRenderer: {fileID: 4022899942930099935}
+  meshRenderer: {fileID: 6170905713954245316}
 --- !u!65 &1614516241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3400,6 +3400,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: -3245915089126971645, guid: 9fdec075ff5f26e4992c5d5c6a1a9c08, type: 3}
   m_PrefabInstance: {fileID: 1755892026}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &6170905713954245316 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -3052466323582680066, guid: 9fdec075ff5f26e4992c5d5c6a1a9c08, type: 3}
+  m_PrefabInstance: {fileID: 1755892026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6794651097269710872 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6794651095799068962, guid: 9fdec075ff5f26e4992c5d5c6a1a9c08, type: 3}
@@ -3408,6 +3413,11 @@ GameObject:
 --- !u!1 &6942878849278794677 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6942878848601887375, guid: 9fdec075ff5f26e4992c5d5c6a1a9c08, type: 3}
+  m_PrefabInstance: {fileID: 1755892026}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &6959691199590030898 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6959691200250058504, guid: 9fdec075ff5f26e4992c5d5c6a1a9c08, type: 3}
   m_PrefabInstance: {fileID: 1755892026}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &7155943874993320316 stripped
