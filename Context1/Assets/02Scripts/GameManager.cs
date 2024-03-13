@@ -67,10 +67,10 @@ public class GameManager : MonoBehaviour
                 {
                     case DevAbilitiesEnum.GravitySwap:GravitySwap();
                         break;
-                    case DevAbilitiesEnum.AdjustJump: AdjustJump();
-                        break;
-                    case DevAbilitiesEnum.AdjustSpeed: AdjustSpeed();
-                        break;
+                    //case DevAbilitiesEnum.AdjustJump: AdjustJump();
+                    //    break;
+                    //case DevAbilitiesEnum.AdjustSpeed: AdjustSpeed();
+                    //    break;
                 }
 
                 break;
@@ -81,8 +81,8 @@ public class GameManager : MonoBehaviour
                         break;
                     case DesAbilitiesEnum.Attack:;
                         break;
-                    case DesAbilitiesEnum.Interact:;
-                        break;
+                    //case DesAbilitiesEnum.Interact:;
+                    //    break;
                 }
                 break;
            

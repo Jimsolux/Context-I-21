@@ -92,9 +92,9 @@ public class PlayerSystem : MonoBehaviour
                 case DesAbilitiesEnum.Attack:
                     Attack();
                     break;
-                case DesAbilitiesEnum.Interact:
-                    DesInteract();
-                    break;
+                //case DesAbilitiesEnum.Interact:
+                //    DesInteract();
+                //    break;
             }
         }
     }
@@ -165,9 +165,5 @@ public class PlayerSystem : MonoBehaviour
 
     }
 
-    private void DesInteract()
-    {
-
-    }
     #endregion
 }
