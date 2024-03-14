@@ -8,6 +8,9 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField] private Transform targetCamera;
     private PlayerRole role;
     private int ID;
+    [SerializeField] private GameObject colliderArtist;
+    [SerializeField] private GameObject colliderDeveloper;
+    [SerializeField] private GameObject colliderDesigner;
 
     // physics stuff
     private Rigidbody rb;
@@ -33,6 +36,7 @@ public class PlayerSystem : MonoBehaviour
 
     public void Setup(PlayerRole myRole, int myID)
     {
+        
         Debug.Log("New player connected; " + role + ", with ID " + ID);
         role = myRole;
         ID = myID;
@@ -40,6 +44,26 @@ public class PlayerSystem : MonoBehaviour
         {
             role = GetComponent<PlayerRoleOverwrite>().role;
         }
+
+        try
+        {
+            switch (role)
+            {
+                case PlayerRole.Artist:
+                    Instantiate(colliderArtist, parent: transform);
+                    break;
+                case PlayerRole.Designer:
+                    Instantiate(colliderDesigner, parent: transform);
+                    break;
+                case PlayerRole.Developer:
+                    Instantiate(colliderDeveloper, parent: transform);
+                    break;
+            }
+        }
+        catch
+        {
+            Debug.LogWarning("No collider object found, my role is " + role);
+        } 
     }
 
     private void Update()
