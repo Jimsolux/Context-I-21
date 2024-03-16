@@ -363,9 +363,9 @@ MonoBehaviour:
   interactDistance: 0
   buttonLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   textBox: {fileID: 0}
-  displayText: 
+  textOffSet: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 8

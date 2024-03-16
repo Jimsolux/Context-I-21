@@ -123,8 +123,8 @@ public class GameManager : MonoBehaviour
 
     public void AddPlayer(PlayerSystem player)
     {
-        try
-        {
+        //try
+        //{
             // The - 1 is due to computer language mumbo jumbo.
             int activePlayers = inputManager.playerCount - 1;
 
@@ -133,11 +133,12 @@ public class GameManager : MonoBehaviour
             player.Setup(role, activePlayers);
 
             connectionScreens[activePlayers].SetActive(false);
-        }
-        catch {
+        //}
+        /*catch (Exception e) {
             Debug.LogError("Player has not been instantiated with the input manager"); 
-            Debug.LogError("Please do not add player objects to the scene, these get added with the PlayerInputComponent"); 
-        }
+            Debug.LogError("Please do not add player objects to the scene, these get added with the PlayerInputComponent");
+            Debug.LogException(e);
+        }*/
     }
 
     #region dev abilities

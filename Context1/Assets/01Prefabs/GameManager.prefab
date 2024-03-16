@@ -58,6 +58,14 @@ MonoBehaviour:
   jumpHeight1: 5
   jumpHeight2: 10
   jumpHeight: 0
+  activeAction: 0
+  devAbilities: 0
+  desAbilities: 0
+  artAbilities: 0
+  targetRotation: {x: 0, y: 0, z: 0, w: 1}
+  sidewaysControls: 0
+  sceneSwitcher: {fileID: 0}
+  gravityDirection: 0
 --- !u!1001 &539436486565542967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -226,8 +234,40 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6013227140452408979, guid: 5d45028c79e0a1d44a28237abb82b8df, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3005024090366739004}
   m_SourcePrefab: {fileID: 100100000, guid: 5d45028c79e0a1d44a28237abb82b8df, type: 3}
+--- !u!114 &2227976223063656296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7249535527722302800, guid: 5d45028c79e0a1d44a28237abb82b8df, type: 3}
+  m_PrefabInstance: {fileID: 8822792141275134520}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2955377908273161387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6013227140452408979, guid: 5d45028c79e0a1d44a28237abb82b8df, type: 3}
+  m_PrefabInstance: {fileID: 8822792141275134520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3005024090366739004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2955377908273161387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 501274b1cd04bcf4a802439f14343ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textButtons: {fileID: 2227976223063656296}
 --- !u!1 &3725242722560832713 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5314918476326309617, guid: 5d45028c79e0a1d44a28237abb82b8df, type: 3}

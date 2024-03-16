@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using TMPro;
 
 public class PlayerSystem : MonoBehaviour
 {
@@ -24,9 +23,10 @@ public class PlayerSystem : MonoBehaviour
     GameObject Buttons;
     ButtonController buttonController;
     //ButtonText
+    /*
     [SerializeField] private TextMeshProUGUI textBox;
     private string displayText;
-    [SerializeField] private Vector3 textOffSet;
+    [SerializeField] private Vector3 textOffSet;*/
 
     // Mechanics stuff
     // Walking
@@ -79,14 +79,17 @@ public class PlayerSystem : MonoBehaviour
         }
 
         Buttons = GameObject.Find("Buttons");
-        buttonController = Buttons.GetComponent<ButtonController>();
-        ReadButtonsSphere(); // Reads all the buttons in the level
+        if (Buttons != null)
+        {
+            buttonController = Buttons.GetComponent<ButtonController>();
+            ReadButtonsSphere(); // Reads all the buttons in the level
+        }
 
     }
 
     private void FixedUpdate()
     {
-        
+
     }
 
     private void Update()
@@ -139,9 +142,9 @@ public class PlayerSystem : MonoBehaviour
                 case DesAbilitiesEnum.Attack:
                     Attack();
                     break;
-                //case DesAbilitiesEnum.Interact:
-                //    DesInteract();
-                //    break;
+                    //case DesAbilitiesEnum.Interact:
+                    //    DesInteract();
+                    //    break;
             }
         }
     }
@@ -219,7 +222,7 @@ public class PlayerSystem : MonoBehaviour
     public void ReadButtonsSphere()
     {
         Collider[] nearbyButtonColliders = Physics.OverlapSphere(transform.position, interactSphereRadius, buttonLayer);
-        
+
     }
 
     public void CalculateButtonDistance()
@@ -238,14 +241,16 @@ public class PlayerSystem : MonoBehaviour
 
     private void ShowInteractUI()
     {
+        /*
         //Textstuff
         textBox.text = buttonController.buttonsCurrentlyPressed + " / 3";
         textBox.color = Color.white;
         textBox.fontSize = 18;
+        */
 
 
         //E to interact
-        if(Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             buttonController.UpdateButtons(IsGrounded());
         }

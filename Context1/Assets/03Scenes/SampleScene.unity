@@ -2279,6 +2279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2955377908273161387, guid: a130c4041d54765498d4f9fe24275243, type: 3}
+      propertyPath: m_Name
+      value: UI
+      objectReference: {fileID: 0}
     - target: {fileID: 3703073408670115820, guid: a130c4041d54765498d4f9fe24275243, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2318,6 +2322,22 @@ PrefabInstance:
     - target: {fileID: 3703073408670115820, guid: a130c4041d54765498d4f9fe24275243, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559418723282562745, guid: a130c4041d54765498d4f9fe24275243, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559418723282562745, guid: a130c4041d54765498d4f9fe24275243, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6559418723282562745, guid: a130c4041d54765498d4f9fe24275243, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8199946707358553117, guid: a130c4041d54765498d4f9fe24275243, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8659389646591853521, guid: a130c4041d54765498d4f9fe24275243, type: 3}
       propertyPath: jumpHeight1
