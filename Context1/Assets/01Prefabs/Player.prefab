@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb056ee1f7e72dc40a7d70dad9d3ca15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chaseSpeed: 5
 --- !u!1 &3993242024720000270
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +355,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 3354342560348555178}
+  colliderArtist: {fileID: 0}
+  colliderDeveloper: {fileID: 0}
+  colliderDesigner: {fileID: 0}
   rotateSpeed: 200
+  interactSphereRadius: 100
+  interactDistance: 0
+  buttonLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  textBox: {fileID: 0}
+  displayText: 
   groundMask:
     serializedVersion: 2
     m_Bits: 8

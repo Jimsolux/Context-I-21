@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerSystem : MonoBehaviour
 {
@@ -15,6 +16,18 @@ public class PlayerSystem : MonoBehaviour
     // physics stuff
     private Rigidbody rb;
     [SerializeField] private float rotateSpeed = 200;
+    //ButtonInteraction
+    Collider[] nearbyButtonColliders;
+    [SerializeField] private float interactSphereRadius = 100;
+    [SerializeField] private float interactDistance;
+    [SerializeField] private LayerMask buttonLayer;
+    GameObject Buttons;
+    ButtonController buttonController;
+    //ButtonText
+    [SerializeField] private TextMeshProUGUI textBox;
+    private string displayText;
+    [SerializeField] private Vector3 textOffSet;
+
     // Mechanics stuff
     // Walking
     private Vector2 direction;
@@ -36,7 +49,7 @@ public class PlayerSystem : MonoBehaviour
 
     public void Setup(PlayerRole myRole, int myID)
     {
-        
+
         Debug.Log("New player connected; " + role + ", with ID " + ID);
         role = myRole;
         ID = myID;
@@ -63,7 +76,17 @@ public class PlayerSystem : MonoBehaviour
         catch
         {
             Debug.LogWarning("No collider object found, my role is " + role);
-        } 
+        }
+
+        Buttons = GameObject.Find("Buttons");
+        buttonController = Buttons.GetComponent<ButtonController>();
+        ReadButtonsSphere(); // Reads all the buttons in the level
+
+    }
+
+    private void FixedUpdate()
+    {
+        
     }
 
     private void Update()
@@ -187,6 +210,49 @@ public class PlayerSystem : MonoBehaviour
     private void Attack()
     {
 
+    }
+
+    #endregion
+
+
+    #region InteractSphere
+    public void ReadButtonsSphere()
+    {
+        Collider[] nearbyButtonColliders = Physics.OverlapSphere(transform.position, interactSphereRadius, buttonLayer);
+        
+    }
+
+    public void CalculateButtonDistance()
+    {
+        foreach (Collider collider in nearbyButtonColliders)
+        {
+            float thisDistance = Vector3.Distance(transform.position, collider.transform.position);
+            if (thisDistance < interactDistance)
+            {
+                ShowInteractUI();
+            }
+            else { buttonController.UpdateButtons(false); } // No currentPress of this player
+
+        }
+    }
+
+    private void ShowInteractUI()
+    {
+        //Textstuff
+        textBox.text = buttonController.buttonsCurrentlyPressed + " / 3";
+        textBox.color = Color.white;
+        textBox.fontSize = 18;
+
+
+        //E to interact
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            buttonController.UpdateButtons(IsGrounded());
+        }
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            buttonController.UpdateButtons(false);
+        }
     }
 
     #endregion
