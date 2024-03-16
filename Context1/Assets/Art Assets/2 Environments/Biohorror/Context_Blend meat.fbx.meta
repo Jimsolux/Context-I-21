@@ -83,7 +83,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: TongueBaked
-    second: {fileID: 2100000, guid: 49c62c6e6450ac74792094c62f90d44b, type: 2}
+    second: {fileID: 2100000, guid: 84f82946788e05f4c9c1444c61c5cfee, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
