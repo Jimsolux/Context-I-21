@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,6 +12,8 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField] private GameObject colliderArtist;
     [SerializeField] private GameObject colliderDeveloper;
     [SerializeField] private GameObject colliderDesigner;
+    private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
     // physics stuff
     private Rigidbody rb;
@@ -48,12 +51,10 @@ public class PlayerSystem : MonoBehaviour
     {
         targetCamera.parent = null;
         GameManager.instance.AddPlayer(this);
-        rb = GetComponent<Rigidbody>();
     }
 
     public void Setup(PlayerRole myRole, int myID)
     {
-
         Debug.Log("New player connected; " + role + ", with ID " + ID);
         role = myRole;
         ID = myID;
@@ -61,6 +62,27 @@ public class PlayerSystem : MonoBehaviour
         {
             role = GetComponent<PlayerRoleOverwrite>().role;
         }
+
+        rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+        float blend = 0;
+
+        switch (role)
+        {
+            case PlayerRole.Artist:
+                blend = 1;
+                break;
+            case PlayerRole.Developer:
+                blend = 0.5f;
+                break;
+            case PlayerRole.Designer:
+                blend = 0;
+                break;
+        }
+
+        animator.SetFloat("Blend", blend);
 
         try
         {
@@ -113,6 +135,26 @@ public class PlayerSystem : MonoBehaviour
     public void OnMovement(InputAction.CallbackContext context)
     {
         direction = context.ReadValue<Vector2>();
+
+        if (animator != null)
+        {
+            if (direction == Vector2.zero)
+                animator.SetBool("Walking", false);
+            else
+            {
+                if (direction.x < 0)
+                {
+                    if (!spriteRenderer.flipX)
+                        spriteRenderer.flipX = true;
+                }
+                else
+                {
+                    if (spriteRenderer.flipX)
+                        spriteRenderer.flipX = false;
+                }
+                animator.SetBool("Walking", true);
+            }
+        }
     }
 
     bool storedSideways = false;
@@ -218,6 +260,7 @@ public class PlayerSystem : MonoBehaviour
     {
         if (context.action.WasPerformedThisFrame())
         {
+            StartCoroutine(AnimatorPlayOnce("Special"));
             GameManager.instance.UseAbility(role);
         }
     }
@@ -248,6 +291,13 @@ public class PlayerSystem : MonoBehaviour
 
         // wanneer je de stickiness check freezed, wil je altijd gravity gebruiken
         if (freezeStickiness) useGravity = true;
+    }
+
+    private IEnumerator AnimatorPlayOnce(string type)
+    {
+        animator.SetBool(type, true);
+        yield return new WaitForSeconds(0.1f);
+        animator.SetBool(type, false);
     }
 
     #region jumping

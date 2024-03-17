@@ -157,6 +157,7 @@ GameObject:
   - component: {fileID: 6478581537847367391}
   - component: {fileID: 2736348461678677456}
   - component: {fileID: 2746624853639968573}
+  - component: {fileID: 7439315194309350454}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -364,8 +365,6 @@ MonoBehaviour:
   buttonLayer:
     serializedVersion: 2
     m_Bits: 0
-  textBox: {fileID: 0}
-  textOffSet: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 8
@@ -433,3 +432,24 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &7439315194309350454
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993242024720000270}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2d51758cc626e6b49b5b27c95787bdcb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

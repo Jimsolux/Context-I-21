@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,6 +106,45 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -114,9 +153,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 332
-        height: 332
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +173,10 @@ TextureImporter:
       name: SpecialUse_1
       rect:
         serializedVersion: 2
-        x: 332
-        y: 0
-        width: 332
-        height: 332
+        x: 330
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,13 +191,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_2
+      name: SpecialUse_10
       rect:
         serializedVersion: 2
-        x: 664
-        y: 0
-        width: 332
-        height: 332
+        x: 3300
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,13 +212,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_3
+      name: SpecialUse_11
       rect:
         serializedVersion: 2
-        x: 996
-        y: 0
-        width: 332
-        height: 332
+        x: 3630
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,13 +233,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_4
+      name: SpecialUse_12
       rect:
         serializedVersion: 2
-        x: 1328
-        y: 0
-        width: 332
-        height: 332
+        x: 3960
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,13 +254,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_5
+      name: SpecialUse_13
       rect:
         serializedVersion: 2
-        x: 1660
-        y: 0
-        width: 332
-        height: 332
+        x: 4290
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,13 +275,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_6
+      name: SpecialUse_14
       rect:
         serializedVersion: 2
-        x: 1992
-        y: 0
-        width: 332
-        height: 332
+        x: 4620
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,13 +296,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_7
+      name: SpecialUse_15
       rect:
         serializedVersion: 2
-        x: 2324
-        y: 0
-        width: 332
-        height: 332
+        x: 4950
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,13 +317,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_8
+      name: SpecialUse_16
       rect:
         serializedVersion: 2
-        x: 2656
-        y: 0
-        width: 332
-        height: 332
+        x: 5280
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,13 +338,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_9
+      name: SpecialUse_17
       rect:
         serializedVersion: 2
-        x: 2988
-        y: 0
-        width: 332
-        height: 332
+        x: 5610
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,13 +359,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_10
+      name: SpecialUse_18
       rect:
         serializedVersion: 2
-        x: 3320
-        y: 0
-        width: 332
-        height: 332
+        x: 5940
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,13 +380,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_11
+      name: SpecialUse_19
       rect:
         serializedVersion: 2
-        x: 3652
-        y: 0
-        width: 332
-        height: 332
+        x: 6270
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,13 +401,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_12
+      name: SpecialUse_2
       rect:
         serializedVersion: 2
-        x: 3984
-        y: 0
-        width: 332
-        height: 332
+        x: 660
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,13 +422,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_13
+      name: SpecialUse_20
       rect:
         serializedVersion: 2
-        x: 4316
-        y: 0
-        width: 332
-        height: 332
+        x: 6600
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -404,13 +443,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_14
+      name: SpecialUse_21
       rect:
         serializedVersion: 2
-        x: 4648
-        y: 0
-        width: 332
-        height: 332
+        x: 6930
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,13 +464,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_15
+      name: SpecialUse_22
       rect:
         serializedVersion: 2
-        x: 4980
-        y: 0
-        width: 332
-        height: 332
+        x: 7260
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -446,13 +485,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_16
+      name: SpecialUse_23
       rect:
         serializedVersion: 2
-        x: 5312
-        y: 0
-        width: 332
-        height: 332
+        x: 7590
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,13 +506,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_17
+      name: SpecialUse_24
       rect:
         serializedVersion: 2
-        x: 5644
-        y: 0
-        width: 332
-        height: 332
+        x: 7920
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -488,13 +527,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_18
+      name: SpecialUse_25
       rect:
         serializedVersion: 2
-        x: 5976
-        y: 0
-        width: 332
-        height: 332
+        x: 8250
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -509,13 +548,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_19
+      name: SpecialUse_26
       rect:
         serializedVersion: 2
-        x: 6308
-        y: 0
-        width: 332
-        height: 332
+        x: 8580
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -530,13 +569,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_20
+      name: SpecialUse_3
       rect:
         serializedVersion: 2
-        x: 6640
-        y: 0
-        width: 332
-        height: 332
+        x: 990
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -551,13 +590,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_21
+      name: SpecialUse_4
       rect:
         serializedVersion: 2
-        x: 6972
-        y: 0
-        width: 332
-        height: 332
+        x: 1320
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -572,13 +611,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_22
+      name: SpecialUse_5
       rect:
         serializedVersion: 2
-        x: 7304
-        y: 0
-        width: 332
-        height: 332
+        x: 1650
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -593,13 +632,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_23
+      name: SpecialUse_6
       rect:
         serializedVersion: 2
-        x: 7636
-        y: 0
-        width: 332
-        height: 332
+        x: 1980
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -614,13 +653,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_24
+      name: SpecialUse_7
       rect:
         serializedVersion: 2
-        x: 7968
-        y: 0
-        width: 332
-        height: 332
+        x: 2310
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -635,13 +674,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_25
+      name: SpecialUse_8
       rect:
         serializedVersion: 2
-        x: 8300
-        y: 0
-        width: 332
-        height: 332
+        x: 2640
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -656,13 +695,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpecialUse_26
+      name: SpecialUse_9
       rect:
         serializedVersion: 2
-        x: 8632
-        y: 0
-        width: 332
-        height: 332
+        x: 2970
+        y: 2
+        width: 330
+        height: 330
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -689,31 +728,31 @@ TextureImporter:
     nameFileIdTable:
       SpecialUse_0: 711760608
       SpecialUse_1: 437778653
-      SpecialUse_10: -1262748420
-      SpecialUse_11: -1072427330
-      SpecialUse_12: 60477749
-      SpecialUse_13: 1321149595
-      SpecialUse_14: 933509479
-      SpecialUse_15: -603042740
-      SpecialUse_16: -478291855
-      SpecialUse_17: 1950216374
-      SpecialUse_18: 1124452367
-      SpecialUse_19: -1326741987
-      SpecialUse_2: -218133139
-      SpecialUse_20: 594104067
-      SpecialUse_21: -472159134
-      SpecialUse_22: 1791717450
-      SpecialUse_23: 1497066685
-      SpecialUse_24: -1803435407
-      SpecialUse_25: -1248635059
-      SpecialUse_26: 1457430947
-      SpecialUse_3: -1591076805
-      SpecialUse_4: -672530698
-      SpecialUse_5: 1536305851
-      SpecialUse_6: 1256768594
-      SpecialUse_7: -1948766631
-      SpecialUse_8: 1899707588
-      SpecialUse_9: 628607649
+      SpecialUse_10: -218133139
+      SpecialUse_11: -1591076805
+      SpecialUse_12: -672530698
+      SpecialUse_13: 1536305851
+      SpecialUse_14: 1256768594
+      SpecialUse_15: -1948766631
+      SpecialUse_16: 1899707588
+      SpecialUse_17: 628607649
+      SpecialUse_18: -1262748420
+      SpecialUse_19: -1072427330
+      SpecialUse_2: 60477749
+      SpecialUse_20: 1321149595
+      SpecialUse_21: 933509479
+      SpecialUse_22: -603042740
+      SpecialUse_23: -478291855
+      SpecialUse_24: 1950216374
+      SpecialUse_25: 1124452367
+      SpecialUse_26: -1326741987
+      SpecialUse_3: 594104067
+      SpecialUse_4: -472159134
+      SpecialUse_5: 1791717450
+      SpecialUse_6: 1497066685
+      SpecialUse_7: -1803435407
+      SpecialUse_8: -1248635059
+      SpecialUse_9: 1457430947
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
