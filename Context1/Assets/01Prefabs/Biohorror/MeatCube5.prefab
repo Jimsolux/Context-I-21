@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 130960834062837587}
   - component: {fileID: 2805288292774176316}
   - component: {fileID: 6640048321039151980}
+  - component: {fileID: -6236281240350312021}
   m_Layer: 0
   m_Name: MeatCube5
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-6236281240350312021
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3660196130556312165}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.020293143, y: 0.021658871, z: 0.020480053}
+  m_Center: {x: 0.000006814953, y: -0.0004008761, z: -0.00027847284}

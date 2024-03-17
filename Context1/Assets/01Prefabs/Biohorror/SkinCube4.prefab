@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3763123932675517118}
   - component: {fileID: 8474049488233755065}
   - component: {fileID: 5579328696240615978}
+  - component: {fileID: 5859468412782400569}
   m_Layer: 0
   m_Name: SkinCube4
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5859468412782400569
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8344119158226708409}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.020625833, y: 0.020659495, z: 0.01993059}
+  m_Center: {x: -0.000055342447, y: -0.00007472791, z: -0.000034703866}

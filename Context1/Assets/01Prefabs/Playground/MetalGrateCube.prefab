@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8187513397101510370}
   - component: {fileID: 5660476217101151773}
   - component: {fileID: 967506446871224605}
+  - component: {fileID: -561857268377615053}
   m_Layer: 0
   m_Name: MetalGrateCube
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-561857268377615053
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4313262746175513864}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02, y: 0.020800002, z: 0.020799998}
+  m_Center: {x: 0.000000004656613, y: 0.00000007636845, z: 0.0009999997}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7509705809540689890}
   - component: {fileID: 4513232498181125874}
   - component: {fileID: 6060088012230018990}
+  - component: {fileID: 7172284866660186362}
   m_Layer: 0
   m_Name: BoneCube
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7172284866660186362
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3331316084804432750}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02487268, y: 0.024872677, z: 0.02304371}
+  m_Center: {x: -0.0001712651, y: 0.00009863077, z: 0.0007560452}

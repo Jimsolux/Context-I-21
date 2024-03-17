@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5472305979772584788}
   - component: {fileID: 9120715753565433545}
   - component: {fileID: 4282865800640111131}
+  - component: {fileID: -4360325370880230764}
   m_Layer: 0
   m_Name: StickyGoo3
-  m_TagString: Untagged
+  m_TagString: StickyStuff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-4360325370880230764
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5005224087288304069}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.02283366, y: 0.023324441, z: 0.022527596}
+  m_Center: {x: -0.0000056060962, y: 0.0003247973, z: 0.00074804004}

@@ -40,8 +40,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2136705935175197741}
+  - component: {fileID: 8932227331181260156}
   m_Layer: 0
-  m_Name: Wrist bones
+  m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,6 +68,27 @@ Transform:
   - {fileID: 1932170490011120456}
   m_Father: {fileID: 7191437387680408300}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &8932227331181260156
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 540570145744900016}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9754d0abeab19ed48b6196f2e31556d1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &853342598097802714
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,7 +98,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7191437387680408300}
-  - component: {fileID: 8336980826868139661}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -101,27 +122,6 @@ Transform:
   - {fileID: 7299880270768486713}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &8336980826868139661
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853342598097802714}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9754d0abeab19ed48b6196f2e31556d1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1333865256894752884
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,6 +864,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7299880270768486713}
   - component: {fileID: 4070907535892466242}
+  - component: {fileID: 2875694396089280873}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -960,3 +961,25 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00010220986, y: 0.036934696, z: 0.008747554}
     m_Extent: {x: 0.022513866, y: 0.037430957, z: 0.014063322}
   m_DirtyAABB: 0
+--- !u!64 &2875694396089280873
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9117987784172135765}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2524342215456974474, guid: 10c5c4824b0848e43aaab06e5b79d0e5, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4104259126482139926}
   - component: {fileID: 1180896750887695915}
   - component: {fileID: 863053776676860788}
+  - component: {fileID: 3844974831135043420}
   m_Layer: 0
   m_Name: ThinMeatCubeLong1
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3844974831135043420
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8622260333396135822}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.022655467, y: 0.042417698, z: 0.0122303665}
+  m_Center: {x: -0.00017930195, y: 0.000036034726, z: -0.00045380593}

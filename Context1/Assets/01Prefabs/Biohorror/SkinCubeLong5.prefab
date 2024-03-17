@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1911527340970025740}
   - component: {fileID: 1369166024498080830}
   - component: {fileID: 7081733564252421920}
+  - component: {fileID: -7037152184108619255}
   m_Layer: 0
   m_Name: SkinCubeLong5
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-7037152184108619255
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4562308633997855137}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.023904797, y: 0.04565519, z: 0.023173008}
+  m_Center: {x: 0.00016540615, y: -0.0003482988, z: 0.0007154136}

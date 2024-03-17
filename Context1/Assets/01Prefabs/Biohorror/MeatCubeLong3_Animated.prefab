@@ -142,8 +142,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6472284298338273231}
   - component: {fileID: 6761729756590324134}
+  - component: {fileID: 6067239538176415025}
   m_Layer: 0
-  m_Name: MeatCubeLong3.001
+  m_Name: MeatCubeLong1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -219,6 +220,27 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.001390133, y: 0.00089941267, z: 0.0002100449}
     m_Extent: {x: 0.01083548, y: 0.011024243, z: 0.020736907}
   m_DirtyAABB: 0
+--- !u!65 &6067239538176415025
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4747206305789388042}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.021670958, y: 0.041473806, z: 0.022048486}
+  m_Center: {x: -0.00039012928, y: -0.00021004493, z: 0.00004959613}
 --- !u!1 &8173897271292250015
 GameObject:
   m_ObjectHideFlags: 0

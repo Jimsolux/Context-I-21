@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 1170912165646148987}
   - component: {fileID: 4901444388367157387}
   - component: {fileID: 3023919341780654246}
+  - component: {fileID: 7108576952178206034}
   m_Layer: 0
   m_Name: ButtonBase
   m_TagString: Untagged
@@ -204,3 +205,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1176c7b437d25d140865e24568dc66b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &7108576952178206034
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8260632393260339762}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0043320213, y: 0.0043320213, z: 0.011999999}
+  m_Center: {x: -0.000000016065314, y: 0.00000001094304, z: 0.0060000005}

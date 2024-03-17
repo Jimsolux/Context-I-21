@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 8979584445120927898}
   - component: {fileID: 3190701059258830086}
   - component: {fileID: 5095908717427824447}
+  - component: {fileID: -6393827380918278653}
   m_Layer: 0
   m_Name: GlidyGlooLong5
-  m_TagString: Untagged
+  m_TagString: GlidyGoo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-6393827380918278653
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527979692187467373}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.023344815, y: 0.042747892, z: 0.022741076}
+  m_Center: {x: -0.00039016968, y: -0.00001912098, z: 0.00013210761}

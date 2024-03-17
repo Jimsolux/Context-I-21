@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1569800609622039331}
   - component: {fileID: 8697604968641840030}
   - component: {fileID: 5039491042708826746}
+  - component: {fileID: 448068545673571320}
   m_Layer: 0
   m_Name: Tooth
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,6 +85,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &448068545673571320
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6827390779888261163}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.016746886, y: 0.014761402, z: 0.019902153}
+  m_Center: {x: -0.0000000013969839, y: -0.0000000013969836, z: -0.0027341063}
 --- !u!1 &8164278413152413553
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,6 +117,7 @@ GameObject:
   - component: {fileID: 6697135332401794820}
   - component: {fileID: 1112319419420427117}
   - component: {fileID: 828627476327686344}
+  - component: {fileID: 6794531898723109088}
   m_Layer: 0
   m_Name: ThinMeatCube1.001
   m_TagString: Untagged
@@ -167,3 +190,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6794531898723109088
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8164278413152413553}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.021619014, y: 0.02125686, z: 0.011661295}
+  m_Center: {x: -0.00035121944, y: -0.00038258726, z: 0.000041415908}
