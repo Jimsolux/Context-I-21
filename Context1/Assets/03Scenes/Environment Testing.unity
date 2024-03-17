@@ -7197,7 +7197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7291512964885225894, guid: 2e9b442ffab3bc444bc582a69429ce4d, type: 3}
       propertyPath: m_Name
-      value: GidyGloo1
+      value: GlidyGloo1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
