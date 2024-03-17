@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2380525443163727239}
   - component: {fileID: 1248319140420222442}
   - component: {fileID: 685573601112958517}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: StickyGoo5
   m_TagString: StickyStuff
   m_Icon: {fileID: 0}

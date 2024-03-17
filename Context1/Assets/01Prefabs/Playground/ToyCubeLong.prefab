@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1876292649156369024}
   - component: {fileID: 8549720694066225403}
   - component: {fileID: 5863137856362995714}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ToyCubeLong
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7976337076962625351}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: -90, z: 0}
 --- !u!33 &1876292649156369024
 MeshFilter:
   m_ObjectHideFlags: 0

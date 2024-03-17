@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1821423264523579327}
   - component: {fileID: 8211177567964849559}
   - component: {fileID: 7839061819617603069}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeA
   m_TagString: Untagged
   m_Icon: {fileID: 0}

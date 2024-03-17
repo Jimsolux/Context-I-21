@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5865345918909399956}
   - component: {fileID: 4188939140422989807}
   - component: {fileID: 1564887649203492525}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GlidyGlooLong2
   m_TagString: GlidyGoo
   m_Icon: {fileID: 0}

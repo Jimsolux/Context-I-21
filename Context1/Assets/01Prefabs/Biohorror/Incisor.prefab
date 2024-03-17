@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4588291585659317646}
   - component: {fileID: 4318561798241371254}
   - component: {fileID: 1072296041254068395}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Incisor
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 4748896003190498753}
   - component: {fileID: 5115520574505466575}
   - component: {fileID: 6573548473143007483}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ThinMeatCube1.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

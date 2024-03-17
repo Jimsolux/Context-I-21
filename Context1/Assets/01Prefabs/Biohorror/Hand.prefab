@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4872378480545873445}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dist.Phalange_Index_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2136705935175197741}
   - component: {fileID: 8932227331181260156}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7191437387680408300}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6767257233332882498}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Prox.Phalange_Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8965540601469565472}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mid.Phalange_Pinky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2522820397950100427}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dist.Phalange_Pinky_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 339226453945075627}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mid.Phalange_Index
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 400842376861052887}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Metacarpal_Index
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8267188754613922602}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dist.Phalange_Middle_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6604167321533318101}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Metacarpal_Pinky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1319567096293449649}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Metacarpal_Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,7 +385,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5922342129826527244}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Prox.Phalange_Index
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -417,7 +417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1932170490011120456}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Metacarpal_Thumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5474973018218972630}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dist.Phalange_Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4886149593144671400}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Prox.Phalange_Thumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1673669656511797816}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Metacarpal_Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +545,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4381399598678547903}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mid.Phalange_Middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,7 +577,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2311066713821643538}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Prox.Phalange_Pinky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,7 +609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 467712336689158175}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dist.Phalange_Index
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,7 +641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1512664850623374532}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dist.Phalange_Ring_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -672,7 +672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5582985681699795472}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dist.Phalange_Pinky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3924591820552070090}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mid.Phalange_Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -736,7 +736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2086627546294248568}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dist.Phalange_Thumb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -768,7 +768,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6599039317124690240}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dist.Phalange_Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -800,7 +800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 188968135048801909}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Prox.Phalange_Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +832,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3187031529177278353}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Dist.Phalange_Thumb_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -865,7 +865,7 @@ GameObject:
   - component: {fileID: 7299880270768486713}
   - component: {fileID: 4070907535892466242}
   - component: {fileID: 2875694396089280873}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}

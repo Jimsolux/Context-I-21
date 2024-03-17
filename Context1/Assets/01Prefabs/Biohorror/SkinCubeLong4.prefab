@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7203685472355719796}
   - component: {fileID: 8049309716857572480}
   - component: {fileID: 7300425017782508512}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SkinCubeLong4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

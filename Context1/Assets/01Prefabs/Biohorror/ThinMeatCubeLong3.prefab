@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1999239687882760463}
   - component: {fileID: 3151563417180902941}
   - component: {fileID: -8371999794992160256}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ThinMeatCubeLong3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

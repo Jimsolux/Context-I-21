@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6363182203117266451}
   - component: {fileID: 1086363866081488635}
   - component: {fileID: 7297437982168242517}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BridgeA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2896002822486091420}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: -90, z: 0}
 --- !u!33 &6363182203117266451
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8915300751578850375}
   - component: {fileID: 7923176842567066905}
   - component: {fileID: 4116895245385288985}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MeatCubeLongSlope5
   m_TagString: Untagged
   m_Icon: {fileID: 0}

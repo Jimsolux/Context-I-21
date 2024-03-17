@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8393018500978747820}
   - component: {fileID: 134285972896391193}
   - component: {fileID: 3886320578554147442}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ToyPlatform_Diagonal2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,13 +27,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4412419007640263145}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: -90, z: 0}
 --- !u!33 &8393018500978747820
 MeshFilter:
   m_ObjectHideFlags: 0

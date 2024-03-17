@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5666552877773924298}
   - component: {fileID: 8687203489847236567}
   - component: {fileID: 4623002262489700943}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ribs
   m_TagString: Untagged
   m_Icon: {fileID: 0}

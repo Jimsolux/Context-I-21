@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5996481142250323501}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bone.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5846052536496635186}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bone_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5345062924378668247}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bone.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3768134627289696665}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 2042163418419748868}
   - component: {fileID: 2214807025882541483}
   - component: {fileID: 4787450497542622294}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MeatCubeLong4_Animated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 2889287937740723202}
   - component: {fileID: 6545941094793406480}
   - component: {fileID: 3264594638106035149}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MeatCubeLong1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
