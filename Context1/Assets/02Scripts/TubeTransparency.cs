@@ -73,11 +73,11 @@ public class TubeTransparency : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("player entered");
             Material[] materials = new Material[2];
             materials[0] = backMaterial;
             materials[1] = frontMaterial; // dit is de material die transparant moet worden
             meshRenderer.materials = materials;
+            other.GetComponent<PlayerSystem>().SetActiveTube(this);
         }
     }
 
@@ -89,6 +89,7 @@ public class TubeTransparency : MonoBehaviour
             materials[0] = backMaterial;
             materials[1] = backMaterial;
             meshRenderer.materials = materials;
+            other.GetComponent<PlayerSystem>().RemoveActiveTube(this);
         }
     }
 }

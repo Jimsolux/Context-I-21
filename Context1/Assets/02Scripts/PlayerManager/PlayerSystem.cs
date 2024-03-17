@@ -15,6 +15,9 @@ public class PlayerSystem : MonoBehaviour
     // physics stuff
     private Rigidbody rb;
     [SerializeField] private float rotateSpeed = 200;
+    private bool useGravity = true;
+    private bool freezeStickiness = false;
+
     //ButtonInteraction
     Collider[] nearbyButtonColliders;
     [SerializeField] private float interactSphereRadius = 100;
@@ -31,6 +34,7 @@ public class PlayerSystem : MonoBehaviour
     // Mechanics stuff
     // Walking
     private Vector2 direction;
+    private TubeTransparency activeTube; // gets the tube the player is currently in
 
     // Jumping
     private bool jumping;
@@ -89,15 +93,19 @@ public class PlayerSystem : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        rb.useGravity = useGravity;
     }
 
     private void Update()
     {
         UpdatePosition(); // this updates player position according to movement input
 
-        RotatePlayer();
+        if (useGravity)
+        {
+            RotatePlayer(); 
+        }
 
+        CheckGravityState();
         CoyoteTime();
     }
 
@@ -107,16 +115,33 @@ public class PlayerSystem : MonoBehaviour
         direction = context.ReadValue<Vector2>();
     }
 
+    bool storedSideways = false;
     private void UpdatePosition()
     {
-        if (GameManager.instance.sidewaysControls)
+        bool currentSideways = GameManager.instance.sidewaysControls;
+
+        /// De logica hierachter is miss beetje moeilijk te begrijpen zonder uitleg, dus;
+        /// Al is er een actieve tube gebruik je de movement pattern van deze, dus de up, down, left right movement
+        /// Al gebruik je geen gravity kijk je naar de *opgeslagen* waarde van de sideways variable. 
+        ///     Dit zorgt er voor dat je niet opeens andere movement patroon gaat krijgen ook al is dit voor de speler zelf niet nodig.
+        /// Als de speler wel gravity gebruikt, wil je gewoon kijken naar de huidige waarde uit de GameManager, aangezien je dan wilt updaten met de gravity richting   
+        if(activeTube != null)
         {
+            float dirX = direction.x;
+            float dirY = direction.y;
+            Vector3 v3Dir = new(dirX, dirY, 0);
+            transform.position += v3Dir * Variables.GetPlayerSpeed() * Time.deltaTime;
+        }
+        else if (currentSideways && useGravity || storedSideways && !useGravity)
+        {
+            storedSideways = true;
             float dirY = direction.y;
             Vector3 v3Dir = new(0, dirY, 0);
             transform.position += v3Dir * Variables.GetPlayerSpeed() * Time.deltaTime;
         }
         else
         {
+            storedSideways = false;
             float dirX = direction.x;
             Vector3 v3Dir = new(dirX, 0, 0);
             transform.position += v3Dir * Variables.GetPlayerSpeed() * Time.deltaTime;
@@ -126,9 +151,33 @@ public class PlayerSystem : MonoBehaviour
 
     private void RotatePlayer()
     {
+        Vector3 targetEuler = GameManager.instance.targetRotation.eulerAngles;
         transform.localRotation = Quaternion.RotateTowards(transform.localRotation, GameManager.instance.targetRotation, Time.deltaTime * rotateSpeed);
+
+        // fixt bug met rotaten tegen sticky surface
+        if (Vector3.Distance(transform.localRotation.eulerAngles, targetEuler) < 1)
+        {
+            freezeStickiness = false;
+        }
+        else
+            freezeStickiness = true;
     }
 
+    public void SetActiveTube(TubeTransparency t)
+    {
+        activeTube = t;
+    }
+
+    public void RemoveActiveTube(TubeTransparency t)
+    {
+        if(activeTube != null)
+        {
+            if(activeTube == t)
+            {
+                activeTube = null;
+            }
+        }
+    }
 
     public void OnAction(InputAction.CallbackContext context)
     {
@@ -156,6 +205,7 @@ public class PlayerSystem : MonoBehaviour
             GameManager.instance.ChangeAbility(role, 1);
         }
     }
+
     public void PreviousAbility(InputAction.CallbackContext context)
     {
         if (context.action.WasPerformedThisFrame())
@@ -172,10 +222,38 @@ public class PlayerSystem : MonoBehaviour
         }
     }
 
+    private void CheckGravityState()
+    {
+        if (Physics.Raycast(transform.position, transform.up * -1, out RaycastHit hit, groundDistance, groundMask))
+        {
+            if(hit.transform.tag == "StickyStuff")
+            {
+                useGravity = false;
+            }
+            else
+            {
+                useGravity = true;
+            }
+        }
+        else
+        {
+            useGravity = true;
+        }
+
+        // wanneer je in een buis zit, wil je geen gravity toepassen (werkt beetje tegen het idee van losse controls ;-;)
+        if(activeTube != null)
+        {
+            useGravity = false;
+        }
+
+        // wanneer je de stickiness check freezed, wil je altijd gravity gebruiken
+        if (freezeStickiness) useGravity = true;
+    }
+
     #region jumping
     private void Jump()
     {
-        if (onCoyoteTime && !jumping)
+        if (onCoyoteTime && !jumping && useGravity)
         {
             rb.AddForce(transform.up * Variables.GetJumpHeight(), ForceMode.Impulse);
             currentCoyoteTime = 0;

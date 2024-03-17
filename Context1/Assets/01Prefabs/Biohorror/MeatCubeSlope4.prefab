@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8536909253049700398}
   - component: {fileID: 7155196632229100008}
   - component: {fileID: 7340049113171689458}
-  - component: {fileID: 3250568995518701441}
+  - component: {fileID: -8729693072759007469}
   m_Layer: 3
   m_Name: MeatCubeSlope4
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3250568995518701441
-BoxCollider:
+--- !u!64 &-8729693072759007469
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,6 +102,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.020066293, y: 0.021549255, z: 0.020334262}
-  m_Center: {x: -0.00003314577, y: -0.00041839704, z: 0.00016713279}
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5670644848081245858, guid: 10c5c4824b0848e43aaab06e5b79d0e5, type: 3}
