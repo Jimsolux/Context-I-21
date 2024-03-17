@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -4858366345617670290}
   m_Layer: 0
   m_Name: TrafficCone
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
