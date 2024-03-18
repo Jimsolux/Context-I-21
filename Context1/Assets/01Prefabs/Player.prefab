@@ -375,6 +375,7 @@ MonoBehaviour:
   colliderArtist: {fileID: 0}
   colliderDeveloper: {fileID: 0}
   colliderDesigner: {fileID: 0}
+  clickingButton: 0
   rotateSpeed: 200
   interactSphereRadius: 100
   interactDistance: 0
@@ -397,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d78434f1e9c5eb4a965da6b85e64d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  role: 2
+  role: 1
 --- !u!54 &2736348461678677456
 Rigidbody:
   m_ObjectHideFlags: 0
