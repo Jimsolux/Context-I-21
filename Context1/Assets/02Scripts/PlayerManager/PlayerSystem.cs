@@ -52,6 +52,7 @@ public class PlayerSystem : MonoBehaviour
     {
         targetCamera.parent = null;
         GameManager.instance.AddPlayer(this);
+        buttonController = ButtonController.instance;
     }
 
     public void Setup(PlayerRole myRole, int myID)
@@ -105,12 +106,6 @@ public class PlayerSystem : MonoBehaviour
             Debug.LogWarning("No collider object found, my role is " + role);
         }
 
-        Buttons = GameObject.Find("Buttons");
-        if (Buttons != null)
-        {
-            buttonController = Buttons.GetComponent<ButtonController>();
-            ReadButtonsSphere(); // Reads all the buttons in the level
-        }
 
     }
 
@@ -129,7 +124,6 @@ public class PlayerSystem : MonoBehaviour
         }
 
         CheckGravityState();
-        CalculateButtonDistance();
         CoyoteTime();
     }
 
@@ -277,10 +271,12 @@ public class PlayerSystem : MonoBehaviour
         if (context.action.WasPerformedThisFrame())
         {
             clickingButton = true;
+            CheckButtonInteract();
         }
         if (context.action.WasReleasedThisFrame())
         {
             clickingButton = false;
+            CheckButtonInteract();
         }
 
     }
@@ -378,53 +374,22 @@ public class PlayerSystem : MonoBehaviour
 
 
     #region InteractSphere
-    public void ReadButtonsSphere()
-    {
-        Collider[] nearbyButtonColliders = Physics.OverlapSphere(transform.position, interactSphereRadius, ButtonController.instance.buttonLayer);
+    public bool canPressButton = false;
+    public TestBotan activeButton;
 
-    }
-
-    public void CalculateButtonDistance()
+    private void CheckButtonInteract()
     {
-        try
-        {
-            if (nearbyButtonColliders.Length > 0)
+            if(activeButton != null)
             {
-                foreach (Collider collider in nearbyButtonColliders)
-                {
-                    float thisDistance = Vector3.Distance(transform.position, collider.transform.position);
-                    if (thisDistance < interactDistance)
-                    {
-                        ShowInteractUI();
-                    }
-                    else { buttonController.UpdateButtons(false); } // No currentPress of this player
-
-                }
+                activeButton.PressButton();
             }
-        }
-        catch { }
-      
-    }
-
-    private void ShowInteractUI()
-    {
-        /*
-        //Textstuff
-        textBox.text = buttonController.buttonsCurrentlyPressed + " / 3";
-        textBox.color = Color.white;
-        textBox.fontSize = 18;
-        */
-
-
-        //E to interact
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            buttonController.UpdateButtons(IsGrounded());
-        }
-        if (Input.GetKeyUp(KeyCode.V))
-        {
-            buttonController.UpdateButtons(false);
-        }
+            buttonController.UpdateButtons();
+            
+            if (activeButton != null)
+            {
+                activeButton.UnPressButton();
+            }
+            buttonController.UpdateButtons();
     }
 
     #endregion

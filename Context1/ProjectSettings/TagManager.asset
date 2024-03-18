@@ -8,6 +8,7 @@ TagManager:
   - StickyStuff
   - Trampoline
   - Spike
+  - Button
   layers:
   - Default
   - TransparentFX

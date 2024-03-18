@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 7108576952178206034}
   m_Layer: 3
   m_Name: ButtonBase
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,6 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1176c7b437d25d140865e24568dc66b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clicked: 0
 --- !u!65 &7108576952178206034
 BoxCollider:
   m_ObjectHideFlags: 0

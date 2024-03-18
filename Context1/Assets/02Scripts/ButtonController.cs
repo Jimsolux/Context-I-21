@@ -1,15 +1,21 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class ButtonController : MonoBehaviour
 {
     public static ButtonController instance;
+    GameObject[] players;
+    int[] isPressedInts = new int[3];
+
+
     private void Awake()
     {
         instance = this;
+
     }
 
     [SerializeField] UnityEvent levelEvent;
@@ -21,7 +27,8 @@ public class ButtonController : MonoBehaviour
     void Start()
     {
         buttonsCurrentlyPressed = 0;
-        UpdateButtons(false); // starts false
+        UpdateButtons(); // starts false
+
     }
 
     void FixedUpdate()
@@ -32,13 +39,32 @@ public class ButtonController : MonoBehaviour
         }
     }
 
-    public void UpdateButtons(bool pressed)
+    public void UpdateButtons()
     {
-        if(pressed && buttonsCurrentlyPressed < 4) { buttonsCurrentlyPressed += 1; }
-        if(!pressed&& buttonsCurrentlyPressed > 0) { buttonsCurrentlyPressed -= 1; }
+        //try
+        //{
+            GameObject[] buttons = GameObject.FindGameObjectsWithTag("Button");// Makes Array with all active buttons
+            //Debug.Log(buttons.Length);
+            for (int i = 0; i < buttons.Count(); i++)
+            {
+                TestBotan buttonthing = buttons[i].GetComponent<TestBotan>(); // instance of that ButtonController
+                int myInt = Convert.ToInt32(buttonthing.clicked);
+                isPressedInts[i] = myInt;
+            Debug.Log(buttonthing.clicked);
+            }
+
+            buttonsCurrentlyPressed = isPressedInts[0] + isPressedInts[1] + isPressedInts[2];
+        //}
+        //catch (Exception e)
+        //{
+            //buttonsCurrentlyPressed = 0;
+            //Debug.Log("Couldnt properly update buttons");
+        //}
+
         UserInterfaceManager.instance.UpdateButtonCount(buttonsCurrentlyPressed, amountOfButtonsInLevel);
         Debug.Log(buttonsCurrentlyPressed);
     }
+
 
 
 
