@@ -373,7 +373,7 @@ public class PlayerSystem : MonoBehaviour
     #region InteractSphere
     public TestBotan activeButton;
 
-    private void CheckButtonInteract(bool value)
+    public void CheckButtonInteract(bool value)
     {
         if (activeButton != null)
         {

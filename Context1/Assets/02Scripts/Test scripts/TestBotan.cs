@@ -33,7 +33,7 @@ public class TestBotan : MonoBehaviour
         if (other.tag == "Player")
         {
             PlayerSystem activePlayerSystem = other.GetComponent<PlayerSystem>();
-            activePlayerSystem.canPressButton = true;
+            //activePlayerSystem.canPressButton = true;
             activePlayerSystem.activeButton = this;
         }
     }
@@ -43,7 +43,8 @@ public class TestBotan : MonoBehaviour
         if (other.tag == "Player")
         {
             PlayerSystem activePlayerSystem = other.GetComponent<PlayerSystem>();
-            activePlayerSystem.canPressButton = false;
+            activePlayerSystem.CheckButtonInteract(false);
+           // activePlayerSystem.canPressButton = false;
             activePlayerSystem.activeButton = null;
         }
     }
