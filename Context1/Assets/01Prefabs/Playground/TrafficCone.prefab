@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2460554721791538474}
   - component: {fileID: 3229566683089761131}
   - component: {fileID: -4858366345617670290}
+  - component: {fileID: 2356272427099340000}
   m_Layer: 0
   m_Name: TrafficCone
   m_TagString: Spike
@@ -105,3 +106,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.013644773, y: 0.013644773, z: 0.015873827}
   m_Center: {x: 0, y: 0, z: 0.007942073}
+--- !u!114 &2356272427099340000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5614999489147440643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8ce8721c26dff4dbbabdb4a754be30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
