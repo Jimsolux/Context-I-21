@@ -14,6 +14,7 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField] private GameObject colliderDesigner;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    public bool clickingButton;
 
     // physics stuff
     private Rigidbody rb;
@@ -271,6 +272,19 @@ public class PlayerSystem : MonoBehaviour
         }
     }
 
+    public void ClickButton(InputAction.CallbackContext context)
+    {
+        if (context.action.WasPerformedThisFrame())
+        {
+            clickingButton = true;
+        }
+        if (context.action.WasReleasedThisFrame())
+        {
+            clickingButton = false;
+        }
+
+    }
+
     private void CheckGravityState()
     {
         if (Physics.Raycast(transform.position, transform.up * -1, out RaycastHit hit, groundDistance, groundMask))
@@ -372,19 +386,23 @@ public class PlayerSystem : MonoBehaviour
 
     public void CalculateButtonDistance()
     {
-        if (nearbyButtonColliders.Length > 0)
+        try
         {
-            foreach (Collider collider in nearbyButtonColliders)
+            if (nearbyButtonColliders.Length > 0)
             {
-                float thisDistance = Vector3.Distance(transform.position, collider.transform.position);
-                if (thisDistance < interactDistance)
+                foreach (Collider collider in nearbyButtonColliders)
                 {
-                    ShowInteractUI();
-                }
-                else { buttonController.UpdateButtons(false); } // No currentPress of this player
+                    float thisDistance = Vector3.Distance(transform.position, collider.transform.position);
+                    if (thisDistance < interactDistance)
+                    {
+                        ShowInteractUI();
+                    }
+                    else { buttonController.UpdateButtons(false); } // No currentPress of this player
 
+                }
             }
         }
+        catch { }
       
     }
 
