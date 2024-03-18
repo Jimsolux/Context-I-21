@@ -300,9 +300,17 @@ public class PlayerSystem : MonoBehaviour
 
     private IEnumerator AnimatorPlayOnce(string type)
     {
-        animator.SetBool(type, true);
-        yield return new WaitForSeconds(0.1f);
-        animator.SetBool(type, false);
+        try
+        {
+            animator.SetBool(type, true);
+        }
+        catch { }
+            yield return new WaitForSeconds(0.1f);
+        try
+        {
+            animator.SetBool(type, false);
+        }
+        catch { }
     }
 
     #region jumping
