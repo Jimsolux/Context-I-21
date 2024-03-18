@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
             case PlayerRole.Designer:
                 switch (desAbilities)
                 {
-                    case DesAbilitiesEnum.Jump:;
+                    case DesAbilitiesEnum.Jump:Jump();
                         break;
                     case DesAbilitiesEnum.Attack:;
                         break;
@@ -210,16 +210,11 @@ public class GameManager : MonoBehaviour
 
     public void Jump()
     {
-       // PlayerSystem player;
 
 
 
     }
 
-    public void Interact()
-    {
-
-    }
     #endregion
 
     #region artAbility

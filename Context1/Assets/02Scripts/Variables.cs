@@ -159,8 +159,6 @@ public enum PlayerAction
 public enum DevAbilitiesEnum
 {
     GravitySwap
-    //AdjustJump, 
-    //AdjustSpeed
 }
 
 public enum ArtAbilitiesEnum
@@ -172,7 +170,6 @@ public enum DesAbilitiesEnum
 {
     Jump,
     Attack
-    //Interact
 }
 
 public enum GravityDirectionEnum

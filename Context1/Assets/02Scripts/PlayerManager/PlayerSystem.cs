@@ -128,6 +128,7 @@ public class PlayerSystem : MonoBehaviour
         }
 
         CheckGravityState();
+        CalculateButtonDistance();
         CoyoteTime();
     }
 
@@ -316,7 +317,7 @@ public class PlayerSystem : MonoBehaviour
     #region jumping
     private void Jump()
     {
-        if (onCoyoteTime && !jumping && useGravity)
+        if (onCoyoteTime && !jumping && useGravity && GameManager.instance.desAbilities == DesAbilitiesEnum.Jump)
         {
             rb.AddForce(transform.up * Variables.GetJumpHeight(), ForceMode.Impulse);
             currentCoyoteTime = 0;
@@ -350,10 +351,13 @@ public class PlayerSystem : MonoBehaviour
     }
     #endregion
 
-    #region other des Abilities
+    #region Attack
     private void Attack()
     {
+        if(GameManager.instance.desAbilities == DesAbilitiesEnum.Attack)    //Check if enum is on Attacking
+        {
 
+        }
     }
 
     #endregion
@@ -362,22 +366,26 @@ public class PlayerSystem : MonoBehaviour
     #region InteractSphere
     public void ReadButtonsSphere()
     {
-        Collider[] nearbyButtonColliders = Physics.OverlapSphere(transform.position, interactSphereRadius, buttonLayer);
+        Collider[] nearbyButtonColliders = Physics.OverlapSphere(transform.position, interactSphereRadius, ButtonController.instance.buttonLayer);
 
     }
 
     public void CalculateButtonDistance()
     {
-        foreach (Collider collider in nearbyButtonColliders)
+        if (nearbyButtonColliders.Length > 0)
         {
-            float thisDistance = Vector3.Distance(transform.position, collider.transform.position);
-            if (thisDistance < interactDistance)
+            foreach (Collider collider in nearbyButtonColliders)
             {
-                ShowInteractUI();
-            }
-            else { buttonController.UpdateButtons(false); } // No currentPress of this player
+                float thisDistance = Vector3.Distance(transform.position, collider.transform.position);
+                if (thisDistance < interactDistance)
+                {
+                    ShowInteractUI();
+                }
+                else { buttonController.UpdateButtons(false); } // No currentPress of this player
 
+            }
         }
+      
     }
 
     private void ShowInteractUI()
@@ -391,15 +399,17 @@ public class PlayerSystem : MonoBehaviour
 
 
         //E to interact
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.V))
         {
             buttonController.UpdateButtons(IsGrounded());
         }
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.V))
         {
             buttonController.UpdateButtons(false);
         }
     }
 
     #endregion
+
+
 }
