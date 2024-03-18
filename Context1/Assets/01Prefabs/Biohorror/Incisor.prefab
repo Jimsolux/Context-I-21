@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4588291585659317646}
   - component: {fileID: 4318561798241371254}
   - component: {fileID: 1072296041254068395}
+  - component: {fileID: 5192125409555860230}
   m_Layer: 3
   m_Name: Incisor
   m_TagString: Spike
@@ -106,6 +107,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.014413701, y: 0.0060999985, z: 0.015999995}
   m_Center: {x: 0.0000000020954758, y: -0.000049999908, z: -0.0009999995}
+--- !u!114 &5192125409555860230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2381955454735948233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8ce8721c26dff4dbbabdb4a754be30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8961180261989719200
 GameObject:
   m_ObjectHideFlags: 0
