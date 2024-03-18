@@ -133,6 +133,8 @@ public class GameManager : MonoBehaviour
             player.Setup(role, activePlayers);
 
             connectionScreens[activePlayers].SetActive(false);
+
+        
         //}
         /*catch (Exception e) {
             Debug.LogError("Player has not been instantiated with the input manager"); 

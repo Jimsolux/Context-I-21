@@ -386,6 +386,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   coyoteTime: 0.1
+  canPressButton: 0
+  activeButton: {fileID: 0}
 --- !u!114 &6478581537847367391
 MonoBehaviour:
   m_ObjectHideFlags: 0
