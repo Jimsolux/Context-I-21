@@ -131,6 +131,11 @@ public class PlayerSystem : MonoBehaviour
         CoyoteTime();
     }
 
+    public void Die()
+    {
+        Debug.Log("'insert roblox oof death sound");
+    }
+
     #region movement
     public void OnMovement(InputAction.CallbackContext context)
     {
