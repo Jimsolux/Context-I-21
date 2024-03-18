@@ -14,7 +14,6 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField] private GameObject colliderDesigner;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-    public bool clickingButton;
 
     // physics stuff
     private Rigidbody rb;
@@ -120,7 +119,7 @@ public class PlayerSystem : MonoBehaviour
 
         if (useGravity)
         {
-            RotatePlayer(); 
+            RotatePlayer();
         }
 
         CheckGravityState();
@@ -168,7 +167,7 @@ public class PlayerSystem : MonoBehaviour
         /// Al gebruik je geen gravity kijk je naar de *opgeslagen* waarde van de sideways variable. 
         ///     Dit zorgt er voor dat je niet opeens andere movement patroon gaat krijgen ook al is dit voor de speler zelf niet nodig.
         /// Als de speler wel gravity gebruikt, wil je gewoon kijken naar de huidige waarde uit de GameManager, aangezien je dan wilt updaten met de gravity richting   
-        if(activeTube != null)
+        if (activeTube != null)
         {
             float dirX = direction.x;
             float dirY = direction.y;
@@ -213,9 +212,9 @@ public class PlayerSystem : MonoBehaviour
 
     public void RemoveActiveTube(TubeTransparency t)
     {
-        if(activeTube != null)
+        if (activeTube != null)
         {
-            if(activeTube == t)
+            if (activeTube == t)
             {
                 activeTube = null;
             }
@@ -270,13 +269,11 @@ public class PlayerSystem : MonoBehaviour
     {
         if (context.action.WasPerformedThisFrame())
         {
-            clickingButton = true;
-            CheckButtonInteract();
+            CheckButtonInteract(true);
         }
         if (context.action.WasReleasedThisFrame())
         {
-            clickingButton = false;
-            CheckButtonInteract();
+            CheckButtonInteract(false);
         }
 
     }
@@ -285,7 +282,7 @@ public class PlayerSystem : MonoBehaviour
     {
         if (Physics.Raycast(transform.position, transform.up * -1, out RaycastHit hit, groundDistance, groundMask))
         {
-            if(hit.transform.tag == "StickyStuff")
+            if (hit.transform.tag == "StickyStuff")
             {
                 useGravity = false;
             }
@@ -300,7 +297,7 @@ public class PlayerSystem : MonoBehaviour
         }
 
         // wanneer je in een buis zit, wil je geen gravity toepassen (werkt beetje tegen het idee van losse controls ;-;)
-        if(activeTube != null)
+        if (activeTube != null)
         {
             useGravity = false;
         }
@@ -316,7 +313,7 @@ public class PlayerSystem : MonoBehaviour
             animator.SetBool(type, true);
         }
         catch { }
-            yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.1f);
         try
         {
             animator.SetBool(type, false);
@@ -364,7 +361,7 @@ public class PlayerSystem : MonoBehaviour
     #region Attack
     private void Attack()
     {
-        if(GameManager.instance.desAbilities == DesAbilitiesEnum.Attack)    //Check if enum is on Attacking
+        if (GameManager.instance.desAbilities == DesAbilitiesEnum.Attack)    //Check if enum is on Attacking
         {
 
         }
@@ -374,22 +371,17 @@ public class PlayerSystem : MonoBehaviour
 
 
     #region InteractSphere
-    public bool canPressButton = false;
     public TestBotan activeButton;
 
-    private void CheckButtonInteract()
+    private void CheckButtonInteract(bool value)
     {
-            if(activeButton != null)
-            {
-                activeButton.PressButton();
-            }
+        if (activeButton != null)
+        {
+            if (value) { activeButton.PressButton(); }
+            else { activeButton.UnPressButton(); }
+
             buttonController.UpdateButtons();
-            
-            if (activeButton != null)
-            {
-                activeButton.UnPressButton();
-            }
-            buttonController.UpdateButtons();
+        }
     }
 
     #endregion

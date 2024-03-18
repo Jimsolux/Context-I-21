@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] Transform target;
-    GameObject[] players;
+    [SerializeField] private Transform target;
+    private GameObject[] players;
+
+    [SerializeField] private GameObject partnerBalloon;
 
     private void Update()
     {
@@ -29,6 +31,11 @@ public class Enemy : MonoBehaviour
             transform.LookAt(target.position + new Vector3(0, -90, 0));
         }
         catch { }
+    }
+
+    public void SceneSwap()
+    {
+        transform.position = partnerBalloon.transform.position;
     }
 
     public void Die()
