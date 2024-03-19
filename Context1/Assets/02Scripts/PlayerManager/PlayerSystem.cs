@@ -221,7 +221,6 @@ public class PlayerSystem : MonoBehaviour
         }
         if(direction == Vector2.zero)
         {
-            Debug.Log(iceSpeed);
             transform.position += storedDir * iceSpeed * Time.deltaTime;
         }
     }
