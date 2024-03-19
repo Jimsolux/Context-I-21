@@ -20,6 +20,7 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField] private float rotateSpeed = 200;
     private bool useGravity = true;
     private bool freezeStickiness = false;
+    private bool slidy = false;
 
     //ButtonInteraction
     Collider[] nearbyButtonColliders;
@@ -127,11 +128,11 @@ public class PlayerSystem : MonoBehaviour
             RotatePlayer();
         }
 
-        CheckGravityState();
+        CheckSpecialState();
         CoyoteTime();
     }
 
-   
+
 
     #region movement
     public void OnMovement(InputAction.CallbackContext context)
@@ -160,6 +161,8 @@ public class PlayerSystem : MonoBehaviour
     }
 
     bool storedSideways = false;
+    Vector3 storedDir = Vector3.zero; 
+    float iceSpeed = 0;
     private void UpdatePosition()
     {
         bool currentSideways = GameManager.instance.sidewaysControls;
@@ -169,26 +172,54 @@ public class PlayerSystem : MonoBehaviour
         /// Al gebruik je geen gravity kijk je naar de *opgeslagen* waarde van de sideways variable. 
         ///     Dit zorgt er voor dat je niet opeens andere movement patroon gaat krijgen ook al is dit voor de speler zelf niet nodig.
         /// Als de speler wel gravity gebruikt, wil je gewoon kijken naar de huidige waarde uit de GameManager, aangezien je dan wilt updaten met de gravity richting   
+
+        float speed = Variables.GetPlayerSpeed();
+        if (!slidy)
+            storedDir = Vector3.zero;
+
+        #region ice physics stuff
+        if (direction != Vector2.zero)
+        {
+            iceSpeed = speed;
+        }
+        else
+        {
+            iceSpeed -= Time.deltaTime * 6;
+            iceSpeed = Mathf.Clamp(iceSpeed, 0, speed);
+        }
+        #endregion
+
         if (activeTube != null)
         {
             float dirX = direction.x;
             float dirY = direction.y;
             Vector3 v3Dir = new(dirX, dirY, 0);
-            transform.position += v3Dir * Variables.GetPlayerSpeed() * Time.deltaTime;
+
+            transform.position += v3Dir * speed * Time.deltaTime;
         }
         else if (currentSideways && useGravity || storedSideways && !useGravity)
         {
             storedSideways = true;
             float dirY = direction.y;
             Vector3 v3Dir = new(0, dirY, 0);
-            transform.position += v3Dir * Variables.GetPlayerSpeed() * Time.deltaTime;
+
+            if (slidy && v3Dir != Vector3.zero) storedDir = v3Dir;
+
+            transform.position += v3Dir * speed * Time.deltaTime;
         }
         else
         {
             storedSideways = false;
             float dirX = direction.x;
             Vector3 v3Dir = new(dirX, 0, 0);
-            transform.position += v3Dir * Variables.GetPlayerSpeed() * Time.deltaTime;
+            if (slidy && v3Dir != Vector3.zero) storedDir = v3Dir;
+
+            transform.position += v3Dir * speed * Time.deltaTime;
+        }
+        if(direction == Vector2.zero)
+        {
+            Debug.Log(iceSpeed);
+            transform.position += storedDir * iceSpeed * Time.deltaTime;
         }
     }
     #endregion
@@ -297,7 +328,7 @@ public class PlayerSystem : MonoBehaviour
 
 
     #endregion
-    private void CheckGravityState()
+    private void CheckSpecialState()
     {
         if (Physics.Raycast(transform.position, transform.up * -1, out RaycastHit hit, groundDistance, groundMask))
         {
@@ -309,10 +340,17 @@ public class PlayerSystem : MonoBehaviour
             {
                 useGravity = true;
             }
+
+            if (hit.transform.tag == "GlidyGoo")
+            {
+                slidy = true;
+            }
+            else slidy = false;
         }
         else
         {
             useGravity = true;
+            slidy = false;
         }
 
         // wanneer je in een buis zit, wil je geen gravity toepassen (werkt beetje tegen het idee van losse controls ;-;)
