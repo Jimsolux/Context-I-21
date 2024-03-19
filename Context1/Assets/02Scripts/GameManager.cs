@@ -59,8 +59,8 @@ public class GameManager : MonoBehaviour
     {
         switch (role)
         {
-            case PlayerRole.Artist: 
-                
+            case PlayerRole.Artist:
+                SwapMood();
                 break;
             case PlayerRole.Developer:
                 switch (devAbilities)
@@ -77,12 +77,10 @@ public class GameManager : MonoBehaviour
             case PlayerRole.Designer:
                 switch (desAbilities)
                 {
-                    case DesAbilitiesEnum.Jump:Jump();
+                    case DesAbilitiesEnum.Jump:;
                         break;
                     case DesAbilitiesEnum.Attack:;
                         break;
-                    //case DesAbilitiesEnum.Interact:;
-                    //    break;
                 }
                 break;
            
