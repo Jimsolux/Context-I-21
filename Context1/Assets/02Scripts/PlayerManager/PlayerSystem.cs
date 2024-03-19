@@ -9,9 +9,9 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField] private Transform targetCamera;
     private PlayerRole role;
     private int ID;
-    [SerializeField] private GameObject colliderArtist;
-    [SerializeField] private GameObject colliderDeveloper;
-    [SerializeField] private GameObject colliderDesigner;
+    [SerializeField] private CapsuleCollider colliderArtist;
+    [SerializeField] private CapsuleCollider colliderDeveloper;
+    [SerializeField] private CapsuleCollider colliderDesigner;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
@@ -90,13 +90,19 @@ public class PlayerSystem : MonoBehaviour
             switch (role)
             {
                 case PlayerRole.Artist:
-                    Instantiate(colliderArtist, parent: transform);
+                    colliderArtist.enabled = true;
+                    colliderDesigner.enabled = false;
+                    colliderDeveloper.enabled = false;
                     break;
                 case PlayerRole.Designer:
-                    Instantiate(colliderDesigner, parent: transform);
+                    colliderArtist.enabled = false;
+                    colliderDesigner.enabled = true;
+                    colliderDeveloper.enabled = false;
                     break;
                 case PlayerRole.Developer:
-                    Instantiate(colliderDeveloper, parent: transform);
+                    colliderArtist.enabled = false;
+                    colliderDesigner.enabled = false;
+                    colliderDeveloper.enabled = true;
                     break;
             }
         }
