@@ -152,10 +152,10 @@ TextureImporter:
       name: DevIdle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 330
-        height: 330
+        x: 1
+        y: 17
+        width: 196
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: DevIdle_1
       rect:
         serializedVersion: 2
-        x: 330
-        y: 2
-        width: 330
-        height: 330
+        x: 333
+        y: 17
+        width: 196
+        height: 198
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

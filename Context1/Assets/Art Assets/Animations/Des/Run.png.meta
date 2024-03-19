@@ -152,10 +152,10 @@ TextureImporter:
       name: Run_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 330
-        height: 330
+        x: 27
+        y: 6
+        width: 147
+        height: 301
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: Run_1
       rect:
         serializedVersion: 2
-        x: 330
-        y: 2
-        width: 330
-        height: 330
+        x: 355
+        y: 11
+        width: 153
+        height: 299
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

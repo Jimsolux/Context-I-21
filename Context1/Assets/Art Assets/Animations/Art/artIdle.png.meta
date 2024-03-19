@@ -152,10 +152,10 @@ TextureImporter:
       name: artIdle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 330
-        height: 330
+        x: 31
+        y: 14
+        width: 249
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: artIdle_1
       rect:
         serializedVersion: 2
-        x: 330
-        y: 0
-        width: 330
-        height: 330
+        x: 361
+        y: 14
+        width: 249
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

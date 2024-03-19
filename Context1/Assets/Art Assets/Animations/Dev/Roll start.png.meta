@@ -153,11 +153,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2
-        width: 330
-        height: 330
+        y: 18
+        width: 185
+        height: 194
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,12 +173,12 @@ TextureImporter:
       name: Roll start_1
       rect:
         serializedVersion: 2
-        x: 330
-        y: 2
-        width: 330
-        height: 330
+        x: 331
+        y: 16
+        width: 203
+        height: 192
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,12 +194,12 @@ TextureImporter:
       name: Roll start_2
       rect:
         serializedVersion: 2
-        x: 660
-        y: 2
-        width: 330
-        height: 330
+        x: 663
+        y: 18
+        width: 204
+        height: 181
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,12 +215,12 @@ TextureImporter:
       name: Roll start_3
       rect:
         serializedVersion: 2
-        x: 990
-        y: 2
-        width: 330
-        height: 330
+        x: 995
+        y: 18
+        width: 212
+        height: 172
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,12 +236,12 @@ TextureImporter:
       name: Roll start_4
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 2
-        width: 330
-        height: 330
+        x: 1328
+        y: 16
+        width: 203
+        height: 169
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,12 +257,12 @@ TextureImporter:
       name: Roll start_5
       rect:
         serializedVersion: 2
-        x: 1650
-        y: 2
-        width: 330
-        height: 330
+        x: 1685
+        y: 14
+        width: 199
+        height: 184
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,12 +278,12 @@ TextureImporter:
       name: Roll start_6
       rect:
         serializedVersion: 2
-        x: 1980
-        y: 2
-        width: 330
-        height: 330
+        x: 2006
+        y: 15
+        width: 181
+        height: 187
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,12 +299,12 @@ TextureImporter:
       name: Roll start_7
       rect:
         serializedVersion: 2
-        x: 2310
-        y: 2
-        width: 330
-        height: 330
+        x: 2343
+        y: 18
+        width: 313
+        height: 180
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

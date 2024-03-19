@@ -152,10 +152,10 @@ TextureImporter:
       name: artAttack_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 330
-        height: 330
+        x: 21
+        y: 16
+        width: 258
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: artAttack_1
       rect:
         serializedVersion: 2
-        x: 330
-        y: 0
-        width: 330
-        height: 330
+        x: 356
+        y: 18
+        width: 251
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: artAttack_2
       rect:
         serializedVersion: 2
-        x: 660
-        y: 0
-        width: 330
-        height: 330
+        x: 697
+        y: 21
+        width: 243
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: artAttack_3
       rect:
         serializedVersion: 2
-        x: 990
-        y: 0
-        width: 330
-        height: 330
+        x: 1027
+        y: 21
+        width: 240
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +236,10 @@ TextureImporter:
       name: artAttack_4
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 0
-        width: 330
-        height: 330
+        x: 1355
+        y: 21
+        width: 247
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +257,10 @@ TextureImporter:
       name: artAttack_5
       rect:
         serializedVersion: 2
-        x: 1650
-        y: 0
-        width: 330
-        height: 330
+        x: 1680
+        y: 18
+        width: 252
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +278,10 @@ TextureImporter:
       name: artAttack_6
       rect:
         serializedVersion: 2
-        x: 1980
-        y: 0
-        width: 330
-        height: 330
+        x: 2002
+        y: 16
+        width: 269
+        height: 237
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,10 +299,10 @@ TextureImporter:
       name: artAttack_7
       rect:
         serializedVersion: 2
-        x: 2310
-        y: 0
-        width: 330
-        height: 330
+        x: 2340
+        y: 14
+        width: 251
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -320,10 +320,10 @@ TextureImporter:
       name: artAttack_8
       rect:
         serializedVersion: 2
-        x: 2640
-        y: 0
-        width: 330
-        height: 330
+        x: 2671
+        y: 14
+        width: 250
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -152,10 +152,10 @@ TextureImporter:
       name: artRun_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 332
-        height: 332
+        x: 28
+        y: 10
+        width: 241
+        height: 238
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: artRun_1
       rect:
         serializedVersion: 2
-        x: 332
-        y: 0
-        width: 332
-        height: 332
+        x: 367
+        y: 17
+        width: 234
+        height: 233
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: artRun_2
       rect:
         serializedVersion: 2
-        x: 664
-        y: 0
-        width: 332
-        height: 332
+        x: 696
+        y: 15
+        width: 249
+        height: 248
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

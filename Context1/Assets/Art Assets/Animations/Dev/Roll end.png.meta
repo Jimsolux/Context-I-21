@@ -152,12 +152,12 @@ TextureImporter:
       name: Roll end_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2
-        width: 330
-        height: 330
+        x: 31
+        y: 11
+        width: 168
+        height: 168
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,12 +173,12 @@ TextureImporter:
       name: Roll end_1
       rect:
         serializedVersion: 2
-        x: 330
-        y: 2
-        width: 330
-        height: 330
+        x: 336
+        y: 12
+        width: 203
+        height: 159
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,12 +194,12 @@ TextureImporter:
       name: Roll end_2
       rect:
         serializedVersion: 2
-        x: 660
-        y: 2
-        width: 330
-        height: 330
+        x: 702
+        y: 1
+        width: 162
+        height: 188
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,12 +215,12 @@ TextureImporter:
       name: Roll end_3
       rect:
         serializedVersion: 2
-        x: 990
-        y: 2
-        width: 330
-        height: 330
+        x: 997
+        y: 17
+        width: 202
+        height: 168
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,12 +236,12 @@ TextureImporter:
       name: Roll end_4
       rect:
         serializedVersion: 2
-        x: 1320
-        y: 2
-        width: 330
-        height: 330
+        x: 1329
+        y: 17
+        width: 199
+        height: 190
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,12 +257,12 @@ TextureImporter:
       name: Roll end_5
       rect:
         serializedVersion: 2
-        x: 1650
-        y: 2
-        width: 330
-        height: 330
+        x: 1661
+        y: 17
+        width: 196
+        height: 198
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
