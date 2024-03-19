@@ -21,6 +21,7 @@ public class PlayerSystem : MonoBehaviour
     private bool useGravity = true;
     private bool freezeStickiness = false;
     private bool slidy = false;
+    private bool ballpit = false;
 
     //ButtonInteraction
     Collider[] nearbyButtonColliders;
@@ -174,6 +175,8 @@ public class PlayerSystem : MonoBehaviour
         /// Als de speler wel gravity gebruikt, wil je gewoon kijken naar de huidige waarde uit de GameManager, aangezien je dan wilt updaten met de gravity richting   
 
         float speed = Variables.GetPlayerSpeed();
+        if (ballpit) speed *= 0.65f;
+
         if (!slidy)
             storedDir = Vector3.zero;
 
@@ -346,11 +349,18 @@ public class PlayerSystem : MonoBehaviour
                 slidy = true;
             }
             else slidy = false;
+
+            if (hit.transform.tag == "Ballpit")
+            {
+                ballpit = true;
+            }
+            else ballpit = false;
         }
         else
         {
             useGravity = true;
             slidy = false;
+            ballpit = false;
         }
 
         // wanneer je in een buis zit, wil je geen gravity toepassen (werkt beetje tegen het idee van losse controls ;-;)

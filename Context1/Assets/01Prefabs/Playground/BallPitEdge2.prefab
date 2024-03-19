@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8901979957640512994}
   - component: {fileID: 2143566394518822050}
   - component: {fileID: 4387753952541196973}
+  - component: {fileID: 2182731742489685335}
   m_Layer: 0
   m_Name: BallPitEdge2
-  m_TagString: Untagged
+  m_TagString: Ballpit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,5 +105,26 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.020000001, y: 0.021132778, z: 0.00522923}
-  m_Center: {x: -0, y: -0.000040324925, z: 0.002614615}
+  m_Size: {x: 0.020000001, y: 0.02113278, z: 0.002}
+  m_Center: {x: -0, y: -0.000040324925, z: 0.001}
+--- !u!65 &2182731742489685335
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187434537854056199}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.020000001, y: 0.0021463751, z: 0.010966808}
+  m_Center: {x: 0, y: 0.008926792, z: 0.005483404}

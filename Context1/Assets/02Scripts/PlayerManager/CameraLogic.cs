@@ -16,7 +16,7 @@ public class CameraLogic : MonoBehaviour
     {
         if(target != null)
         {
-            Vector3 targetPos = new(target.position.x, target.position.y, transform.position.z); // keep own z offset cuz 2D camera logic
+            Vector3 targetPos = new(target.position.x, target.position.y + 0.5f, transform.position.z); // keep own z offset cuz 2D camera logic
 
             transform.position = Vector3.MoveTowards(transform.position, targetPos, chaseSpeed);
         }
