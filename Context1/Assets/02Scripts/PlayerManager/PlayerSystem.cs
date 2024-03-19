@@ -116,7 +116,6 @@ public class PlayerSystem : MonoBehaviour
     private void FixedUpdate()
     {
         rb.useGravity = useGravity;
-        CheckFallOutLevel();
     }
 
     private void Update()
@@ -296,10 +295,6 @@ public class PlayerSystem : MonoBehaviour
         lastCheckPoint = checkpoint;
     }
 
-    void CheckFallOutLevel()
-    {
-        if (transform.position.y < -20 || transform.position.y > 100 || transform.position.x > 300 || transform.position.x < -300) Die(); Debug.Log("Fallen out of map");
-    }
 
     #endregion
     private void CheckGravityState()

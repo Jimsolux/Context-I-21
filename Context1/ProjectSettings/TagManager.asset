@@ -9,6 +9,7 @@ TagManager:
   - Trampoline
   - Spike
   - Button
+  - StartCheckPoint
   layers:
   - Default
   - TransparentFX
