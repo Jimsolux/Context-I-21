@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     [SerializeField] private PlayerInputManager inputManager;
-    private int activePlayers;
 
     [Header("Interface variables")]
     [SerializeField] private GameObject canvasMain;
@@ -208,12 +207,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void Jump()
-    {
-
-
-
-    }
 
     #endregion
 

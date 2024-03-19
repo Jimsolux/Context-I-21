@@ -13,26 +13,11 @@ public class SceneSwitchDebug : MonoBehaviour
 
     private void Start()
     {
+        playGround.SetActive(true);
+        bioHorror.SetActive(false);
         currentlyPlayground = true;
     }
-    //void Update()
-    //{
-    //    if(currentlyPlayground)
-    //    {
-    //        playGround.SetActive(true);
-    //        bioHorror.SetActive(false);
-    //    }
-    //    else
-    //    {
-    //        playGround.SetActive(false);
-    //        bioHorror.SetActive(true);
-    //    }
 
-    //    if (Input.GetKeyDown(KeyCode.Q))
-    //    {
-    //        currentlyPlayground = !currentlyPlayground;
-    //    }
-    //}
 
     public void SwapMood()
     {
@@ -46,7 +31,8 @@ public class SceneSwitchDebug : MonoBehaviour
             case true:  // Its playground --> Becomes biohorror
                 playGround.SetActive(false);
                 bioHorror.SetActive(true);
-                currentlyPlayground =false; break;
+                currentlyPlayground =false; 
+                break;
         }
     }
 }

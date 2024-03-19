@@ -28,11 +28,9 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField] private LayerMask buttonLayer;
     GameObject Buttons;
     ButtonController buttonController;
-    //ButtonText
-    /*
-    [SerializeField] private TextMeshProUGUI textBox;
-    private string displayText;
-    [SerializeField] private Vector3 textOffSet;*/
+
+    //Checkpoint
+    public Transform lastCheckPoint;    //last collided checkpoint.
 
     // Mechanics stuff
     // Walking
@@ -111,6 +109,7 @@ public class PlayerSystem : MonoBehaviour
             Debug.LogWarning("No collider object found, my role is " + role);
         }
 
+        lastCheckPoint = GameObject.FindGameObjectWithTag("StartCheckPoint").transform;// Sets initial checkpoint
 
     }
 
@@ -132,10 +131,7 @@ public class PlayerSystem : MonoBehaviour
         CoyoteTime();
     }
 
-    public void Die()
-    {
-        Debug.Log("'insert roblox oof death sound");
-    }
+   
 
     #region movement
     public void OnMovement(InputAction.CallbackContext context)
@@ -286,7 +282,19 @@ public class PlayerSystem : MonoBehaviour
     }
 
     #endregion
+    #region Checkpoint and death
+    public void Die()
+    {
+        Debug.Log("'insert roblox oof death sound");
+        rb.velocity = Vector3.zero;
+        transform.position = lastCheckPoint.position;
+    }
 
+    public void UpdateCheckPoint(Transform checkpoint)
+    {
+        lastCheckPoint = checkpoint;
+    }
+    #endregion
     private void CheckGravityState()
     {
         if (Physics.Raycast(transform.position, transform.up * -1, out RaycastHit hit, groundDistance, groundMask))
