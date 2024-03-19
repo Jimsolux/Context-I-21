@@ -4471,6 +4471,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Incisor
       objectReference: {fileID: 0}
+    - target: {fileID: 2381955454735948233, guid: 07af776d1b0965341a0cc5d6146f127a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6722170908721434632, guid: 07af776d1b0965341a0cc5d6146f127a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.964878
