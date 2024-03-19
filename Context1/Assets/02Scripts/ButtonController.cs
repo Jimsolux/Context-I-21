@@ -15,7 +15,6 @@ public class ButtonController : MonoBehaviour
     private void Awake()
     {
         instance = this;
-
     }
 
     [SerializeField] UnityEvent levelEvent;
@@ -50,7 +49,7 @@ public class ButtonController : MonoBehaviour
                 TestBotan buttonthing = buttons[i].GetComponent<TestBotan>(); // instance of that ButtonController
                 int myInt = Convert.ToInt32(buttonthing.clicked);
                 isPressedInts[i] = myInt;
-            Debug.Log(buttonthing.clicked);
+                //Debug.Log(buttonthing.clicked);
             }
 
             buttonsCurrentlyPressed = isPressedInts[0] + isPressedInts[1] + isPressedInts[2];
@@ -62,7 +61,7 @@ public class ButtonController : MonoBehaviour
         //}
 
         UserInterfaceManager.instance.UpdateButtonCount(buttonsCurrentlyPressed, amountOfButtonsInLevel);
-        Debug.Log(buttonsCurrentlyPressed);
+        //Debug.Log(buttonsCurrentlyPressed);
     }
 
 

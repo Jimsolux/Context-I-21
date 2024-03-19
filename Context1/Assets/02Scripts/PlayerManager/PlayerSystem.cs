@@ -42,7 +42,7 @@ public class PlayerSystem : MonoBehaviour
     // Jumping
     private bool jumping;
     [SerializeField] private LayerMask groundMask;
-    private float groundDistance = 0.51f;
+    private float groundDistance = 1.51f;
     [SerializeField] private float coyoteTime = 0.1f; // The time the player can still jump after they are no longer grounded
     private float currentCoyoteTime = 0f;
     private bool onCoyoteTime = false;
@@ -190,7 +190,7 @@ public class PlayerSystem : MonoBehaviour
         }
     }
     #endregion
-
+    #region Secondary Movement
     private void RotatePlayer()
     {
         Vector3 targetEuler = GameManager.instance.targetRotation.eulerAngles;
@@ -220,7 +220,8 @@ public class PlayerSystem : MonoBehaviour
             }
         }
     }
-
+    #endregion
+    #region Inputsystem
     public void OnAction(InputAction.CallbackContext context)
     {
         if (context.action.WasPressedThisFrame())
@@ -277,6 +278,8 @@ public class PlayerSystem : MonoBehaviour
         }
 
     }
+
+    #endregion
 
     private void CheckGravityState()
     {
