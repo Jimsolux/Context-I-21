@@ -37,10 +37,12 @@ public class BridgeCollapse : MonoBehaviour
         animator.SetInteger("State", 2);
         yield return new WaitForSeconds(0.2f);
         coll.enabled = false;
+        coll.gameObject.layer = 0;
+        GetComponent<Collider>().enabled = false;
         if (!updated)
         {
             updated = true;
-        GameManager.instance.UpdatePathfinding();
+            GameManager.instance.UpdatePathfinding();
         }
     }
 }
