@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5543621106175827355}
   - component: {fileID: 5753739228461913951}
   - component: {fileID: 4708162499468445293}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tube Transparency logic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 5654404222687267465}
   - component: {fileID: 7307508524181083054}
   - component: {fileID: 4419001091399523637}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tube_Corner
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1,5 +1,6 @@
 using JetBrains.Annotations;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Windows;
@@ -7,6 +8,7 @@ using UnityEngine.Windows;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    private List<AstarPath> pathfinders = new();
 
     [SerializeField] private PlayerInputManager inputManager;
 
@@ -44,6 +46,21 @@ public class GameManager : MonoBehaviour
     {
         playerSpeed = walkSpeed;
         jumpHeight = jumpHeight1;
+
+        GameObject[] pathfinderObjects = GameObject.FindGameObjectsWithTag("Pathfinding");
+
+        foreach (GameObject g in pathfinderObjects)
+        {
+            pathfinders.Add(g.GetComponent<AstarPath>());
+        }
+    }
+
+    public void UpdatePathfinding()
+    {
+        foreach(AstarPath p in pathfinders)
+        {
+            p.Scan();
+        }
     }
 
     private void Update()

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1242948135395578506}
   - component: {fileID: 6311769571998409605}
   - component: {fileID: 2024087916155748865}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ButtonBase
-  m_TagString: Untagged
+  m_TagString: Button
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 821489759826014193}
   - component: {fileID: 1503060769493817476}
   - component: {fileID: 6268020080251069764}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SmallEye
   m_TagString: Untagged
   m_Icon: {fileID: 0}

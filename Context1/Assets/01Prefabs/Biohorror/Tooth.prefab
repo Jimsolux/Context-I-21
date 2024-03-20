@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5039491042708826746}
   - component: {fileID: 448068545673571320}
   - component: {fileID: -1478245273638768093}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Tooth
   m_TagString: Spike
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 1112319419420427117}
   - component: {fileID: 828627476327686344}
   - component: {fileID: 6794531898723109088}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ThinMeatCube1.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

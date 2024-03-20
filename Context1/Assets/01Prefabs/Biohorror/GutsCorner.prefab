@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2062796384289772091}
   - component: {fileID: 5360207499580066902}
   - component: {fileID: -3712829884522363669}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GutsCorner
   m_TagString: Untagged
   m_Icon: {fileID: 0}

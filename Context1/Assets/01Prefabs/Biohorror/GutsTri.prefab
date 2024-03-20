@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7089416362450650926}
   - component: {fileID: 2298440796773442713}
   - component: {fileID: 7103480512603007786}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GutsTri
   m_TagString: Untagged
   m_Icon: {fileID: 0}

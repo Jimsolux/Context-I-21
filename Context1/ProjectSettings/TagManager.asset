@@ -11,6 +11,9 @@ TagManager:
   - Button
   - StartCheckPoint
   - Ballpit
+  - Balloon
+  - Enemy
+  - Pathfinding
   layers:
   - Default
   - TransparentFX
@@ -19,9 +22,9 @@ TagManager:
   - Water
   - UI
   - Button
-  - 
-  - 
-  - 
+  - Obstacle
+  - Balloon
+  - Enemy
   - 
   - 
   - 
