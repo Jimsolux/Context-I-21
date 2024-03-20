@@ -33,6 +33,8 @@ public class PlayerSystem : MonoBehaviour
 
     //Checkpoint
     public Transform lastCheckPoint;    //last collided checkpoint.
+    //Attack
+    [SerializeField] private GameObject AttackCloudPrefab;
 
     // Mechanics stuff
     // Walking
@@ -267,6 +269,7 @@ public class PlayerSystem : MonoBehaviour
                     Jump();
                     break;
                 case DesAbilitiesEnum.Attack:
+                    Debug.Log("Switched to Attack");
                     Attack();
                     break;
                     //case DesAbilitiesEnum.Interact:
@@ -429,7 +432,16 @@ public class PlayerSystem : MonoBehaviour
     {
         if (GameManager.instance.desAbilities == DesAbilitiesEnum.Attack)    //Check if enum is on Attacking
         {
-
+            Vector3 spawnPos = transform.position;
+            if (spriteRenderer.flipX)
+            {
+                spawnPos.x -= 1.3f;
+            }
+            else
+            {
+                spawnPos.x += 1.3f;
+            }
+            Instantiate(AttackCloudPrefab, spawnPos, Quaternion.identity, null);
         }
     }
 
