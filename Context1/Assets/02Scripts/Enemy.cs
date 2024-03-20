@@ -1,3 +1,4 @@
+using Pathfinding;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,14 @@ public class Enemy : MonoBehaviour
     private GameObject[] players;
 
     [SerializeField] private GameObject partnerBalloon;
+    [SerializeField] private Transform rotatePivot;
+    [SerializeField] private Transform model;
+    private AIDestinationSetter destinationTarget;
+
+    private void Start()
+    {
+        destinationTarget = GetComponent<AIDestinationSetter>();
+    }
 
     private void Update()
     {
@@ -26,9 +35,14 @@ public class Enemy : MonoBehaviour
                 }
             }
 
-            transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime);
+            //transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime);
+            destinationTarget.target = target;
 
-            transform.LookAt(target.position + new Vector3(0, -90, 0));
+            rotatePivot.LookAt(destinationTarget.target);
+            Vector3 rotationV3 = rotatePivot.rotation.eulerAngles;
+            rotationV3.x += 90;
+            Debug.DrawRay(rotatePivot.position, rotatePivot.forward * 10, Color.red);
+            model.rotation = Quaternion.Euler(rotationV3);
         }
         catch { }
     }

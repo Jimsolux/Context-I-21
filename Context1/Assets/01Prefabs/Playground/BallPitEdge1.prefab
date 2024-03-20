@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1207674996739114348}
   - component: {fileID: 5454301174343426789}
   - component: {fileID: 7997992797374016205}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BallPitEdge1
   m_TagString: Ballpit
   m_Icon: {fileID: 0}

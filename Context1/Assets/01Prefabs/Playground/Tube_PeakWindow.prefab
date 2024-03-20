@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7702128017730214070}
   - component: {fileID: 1044590411097079454}
   - component: {fileID: 3787154736052183589}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tube_PeakWindow
   m_TagString: Untagged
   m_Icon: {fileID: 0}

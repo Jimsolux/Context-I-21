@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7488423741071060879}
   - component: {fileID: 5889414753448559604}
   - component: {fileID: 5519366427921218702}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tube_T
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 5237475666783913033}
   - component: {fileID: 3276665748326802526}
   - component: {fileID: 768565939296545206}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tube Transparency logic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
