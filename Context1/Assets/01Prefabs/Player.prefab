@@ -159,6 +159,7 @@ GameObject:
   - component: {fileID: 2746624853639968573}
   - component: {fileID: 7439315194309350454}
   - component: {fileID: 3876901191556149217}
+  - component: {fileID: 1277137235079569598}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -373,9 +374,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 3354342560348555178}
-  colliderArtist: {fileID: 0}
-  colliderDeveloper: {fileID: 0}
-  colliderDesigner: {fileID: 0}
+  colliderArtist: {fileID: 2746624853639968573}
+  colliderDeveloper: {fileID: 3876901191556149217}
+  colliderDesigner: {fileID: 1277137235079569598}
   rotateSpeed: 200
   interactSphereRadius: 100
   interactDistance: 0
@@ -447,10 +448,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.8855917
+  m_Height: 1.8044469
   m_Direction: 1
-  m_Center: {x: -0.4, y: 0, z: 0}
+  m_Center: {x: -0.042127907, y: 0.11163604, z: 0}
 --- !u!95 &7439315194309350454
 Animator:
   serializedVersion: 5
@@ -489,9 +490,32 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 0.58
-  m_Height: 1.47
+  m_Radius: 0.59934396
+  m_Height: 1.4566077
   m_Direction: 1
-  m_Center: {x: -0.43, y: -0.27, z: 0}
+  m_Center: {x: 0.07939154, y: 0.02660793, z: 0}
+--- !u!136 &1277137235079569598
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3993242024720000270}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.41
+  m_Height: 2.0287876
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.0022864342, z: 0}
