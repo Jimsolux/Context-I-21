@@ -31,12 +31,16 @@ public class BridgeCollapse : MonoBehaviour
             StartCoroutine(DestroyBridge());
         }
     }
-
+    private bool updated = false;
     private IEnumerator DestroyBridge()
     {
         animator.SetInteger("State", 2);
         yield return new WaitForSeconds(0.2f);
         coll.enabled = false;
+        if (!updated)
+        {
+            updated = true;
         GameManager.instance.UpdatePathfinding();
+        }
     }
 }
