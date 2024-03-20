@@ -14,6 +14,7 @@ TagManager:
   - Balloon
   - Enemy
   - Pathfinding
+  - Camera
   layers:
   - Default
   - TransparentFX

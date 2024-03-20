@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4571171257435267179}
   - component: {fileID: 7158162699731588695}
   - component: {fileID: 1638160390709999290}
-  - component: {fileID: 5780600460955202382}
   - component: {fileID: 6087492389848310545}
   m_Layer: 0
   m_Name: AttackCloudPrefab
@@ -123,21 +122,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!111 &5780600460955202382
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8143716896249342265}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b8b31682f4d8d794890148cf31e246ab, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!65 &6087492389848310545
 BoxCollider:
   m_ObjectHideFlags: 0

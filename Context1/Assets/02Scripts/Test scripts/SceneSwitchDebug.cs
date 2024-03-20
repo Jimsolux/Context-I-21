@@ -5,6 +5,13 @@ using Pathfinding;
 
 public class SceneSwitchDebug : MonoBehaviour
 {
+    public static SceneSwitchDebug instance;
+
+    private void Awake()
+    {
+        instance = this; 
+    }
+
     // let niet op de namen van de variables, dit is letterlijk gwn voor testen
 
     public GameObject playGround;
@@ -13,14 +20,25 @@ public class SceneSwitchDebug : MonoBehaviour
     bool currentlyPlayground;
     private List<Enemy> enemies = new();
     private List<BalloonFlight> balloons = new();
+    private List<Camera> cams = new();
+    [SerializeField] private Color bgColorPlayground;
+    [SerializeField] private Color bgColorBiohorror;
+
     private void Start()
     {
         GameObject[] enemyObjects = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] balloonObjects = GameObject.FindGameObjectsWithTag("Balloon");
 
+        GameObject[] cameraObjects = GameObject.FindGameObjectsWithTag("Camera");
+
         playGround.SetActive(true);
         bioHorror.SetActive(false);
         currentlyPlayground = true;
+
+        foreach(GameObject cam in cameraObjects)
+        {
+            cams.Add(cam.GetComponent<Camera>());
+        }
 
         // wat dit doet is de enemy/balloon lists sorten zodat ze gepaired zijn
         for(int i = 0; i < enemyObjects.Length; i++)
@@ -45,6 +63,11 @@ public class SceneSwitchDebug : MonoBehaviour
     }
 
 
+    public void AddCam(Camera cam)
+    {
+        cams.Add(cam);
+    }
+
     public void SwapMood()
     {
         switch (currentlyPlayground)    // Checks if its playground and swaps it with Biohorror or the other way around
@@ -58,6 +81,11 @@ public class SceneSwitchDebug : MonoBehaviour
                     b.SceneSwap();
                 }
 
+                foreach(Camera cam in cams)
+                {
+                    cam.backgroundColor = bgColorPlayground;
+                }
+
                 currentlyPlayground =true; 
                 break;
             case true:  // Its playground --> Becomes biohorror
@@ -66,12 +94,31 @@ public class SceneSwitchDebug : MonoBehaviour
 
                 foreach(Enemy e in enemies)
                 {
-                    e.SceneSwap();
+                    try
+                    {
+                        e.SceneSwap();
+                    }
+                    catch { }
+                }
+
+                foreach (Camera cam in cams)
+                {
+                    cam.backgroundColor = bgColorBiohorror;
                 }
 
                 currentlyPlayground =false; 
                 break;
         }
         GameManager.instance.UpdatePathfinding();
+    }
+
+    public void RemoveEye(Enemy e)
+    {
+        enemies.Remove(e);
+    }
+
+    public void RemoveBalloon(BalloonFlight f)
+    {
+        balloons.Remove(f);
     }
 }

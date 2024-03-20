@@ -36,9 +36,23 @@ public class Enemy : MonoBehaviour
             }
 
             //transform.position = Vector3.MoveTowards(transform.position, target.position, Time.deltaTime);
-            destinationTarget.target = target;
 
-            rotatePivot.LookAt(destinationTarget.target);
+            if (destinationTarget != null)
+            {
+                destinationTarget.target = target;
+
+                rotatePivot.LookAt(destinationTarget.target);
+            }
+            else
+            {
+                rotatePivot.LookAt(target);
+            }
+
+            if(Vector3.Distance(transform.position, target.position) < 0.75f)
+            {
+                target.GetComponent<PlayerSystem>().Die();
+            }
+
             Vector3 rotationV3 = rotatePivot.rotation.eulerAngles;
             rotationV3.x += 90;
             Debug.DrawRay(rotatePivot.position, rotatePivot.forward * 10, Color.red);
@@ -56,6 +70,10 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
+        SceneSwitchDebug.instance.RemoveEye(this);
+        SceneSwitchDebug.instance.RemoveBalloon(partnerBalloon.GetComponent<BalloonFlight>());
 
+        Destroy(partnerBalloon);
+        Destroy(gameObject);
     }
 }

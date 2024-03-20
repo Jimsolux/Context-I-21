@@ -16,7 +16,7 @@ public class AttackCloud : MonoBehaviour
 
     private void Update()
     {
-        Destroy(gameObject, .7f);    // 1 sec?
+        Destroy(gameObject, 0.7f);    // 1 sec?
     }
 
     public void PlayAttackAnimation()
@@ -26,10 +26,10 @@ public class AttackCloud : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.name);
         if (other.tag == "Enemy")
         {
-            other.GetComponent<Rigidbody>().velocity = Vector3.zero;
-            other.gameObject.SetActive(false);  //kill
+            other.GetComponent<Enemy>().Die();
         }
     }
 

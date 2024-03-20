@@ -10,6 +10,7 @@ public class CameraLogic : MonoBehaviour
     private void Awake()
     {
         target = transform.parent;
+        SceneSwitchDebug.instance.AddCam(transform.GetComponent<Camera>());
     }
 
     void Update()
