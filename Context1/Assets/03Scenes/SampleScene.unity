@@ -5684,6 +5684,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 470223831776960836, guid: 5384135658476694ab3ba72967240a02, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1447687880943260235, guid: 5384135658476694ab3ba72967240a02, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4268661258487291518, guid: 5384135658476694ab3ba72967240a02, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6222175199223586320, guid: 5384135658476694ab3ba72967240a02, type: 3}
       propertyPath: m_Name
       value: BridgeB

@@ -49,7 +49,9 @@ public class Enemy : MonoBehaviour
 
     public void SceneSwap()
     {
-        transform.position = partnerBalloon.transform.position;
+        Vector3 fixedPos = partnerBalloon.transform.position;
+        fixedPos.z = 0;
+        transform.position = fixedPos;
     }
 
     public void Die()
