@@ -90,7 +90,7 @@ public class SceneSwitchDebug : MonoBehaviour
                     cam.backgroundColor = bgColorPlayground;
                 }
                 RenderSettings.fogColor = fogColorPlayground;
-                RenderSettings.fogDensity = 0.01f;
+                RenderSettings.fogDensity = 0.003f;
 
                 currentlyPlayground =true; 
                 break;

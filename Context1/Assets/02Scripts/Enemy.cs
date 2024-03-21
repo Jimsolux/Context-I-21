@@ -48,10 +48,11 @@ public class Enemy : MonoBehaviour
                 rotatePivot.LookAt(target);
             }
 
-            if(Vector3.Distance(transform.position, target.position) < 0.75f)
+            if(Vector3.Distance(transform.position, target.position) < 1)
             {
                 target.GetComponent<PlayerSystem>().Die();
             }
+            Debug.Log(Vector3.Distance(transform.position, target.position));
 
             Vector3 rotationV3 = rotatePivot.rotation.eulerAngles;
             rotationV3.x += 90;
