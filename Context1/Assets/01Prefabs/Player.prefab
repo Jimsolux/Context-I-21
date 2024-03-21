@@ -224,7 +224,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -121189759, guid: d63e0f2d184c1c54cbaf3bca44753068, type: 3}
+  m_Sprite: {fileID: 751459981, guid: e525a4c94f137464ab97fcdd1d6f3b12, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -412,10 +412,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 2
-  m_Radius: 0.8855917
-  m_Height: 1.8044469
+  m_Radius: 0.7988312
+  m_Height: 1.9316957
   m_Direction: 1
-  m_Center: {x: -0.042127907, y: 0.11163604, z: 0}
+  m_Center: {x: 0.20080149, y: 0.87512815, z: 0}
 --- !u!95 &7439315194309350454
 Animator:
   serializedVersion: 5
@@ -495,4 +495,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d78434f1e9c5eb4a965da6b85e64d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  role: 2
+  role: 0
