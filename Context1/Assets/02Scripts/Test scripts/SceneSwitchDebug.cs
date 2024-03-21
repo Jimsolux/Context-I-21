@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using System;
 
 public class SceneSwitchDebug : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class SceneSwitchDebug : MonoBehaviour
     private List<Camera> cams = new();
     [SerializeField] private Color bgColorPlayground;
     [SerializeField] private Color bgColorBiohorror;
+
+    [SerializeField] private Color fogColorPlayground;
+    [SerializeField] private Color fogColorBiohorror;
 
     private void Start()
     {
@@ -85,6 +89,8 @@ public class SceneSwitchDebug : MonoBehaviour
                 {
                     cam.backgroundColor = bgColorPlayground;
                 }
+                RenderSettings.fogColor = fogColorPlayground;
+                RenderSettings.fogDensity = 0.01f;
 
                 currentlyPlayground =true; 
                 break;
@@ -105,6 +111,8 @@ public class SceneSwitchDebug : MonoBehaviour
                 {
                     cam.backgroundColor = bgColorBiohorror;
                 }
+                RenderSettings.fogColor = fogColorBiohorror;
+                RenderSettings.fogDensity = 0.02f;
 
                 currentlyPlayground =false; 
                 break;
