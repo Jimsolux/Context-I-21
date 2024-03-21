@@ -279,22 +279,6 @@ public class PlayerSystem : MonoBehaviour
         }
     }
 
-    public void NextAbility(InputAction.CallbackContext context)
-    {
-        if (context.action.WasPerformedThisFrame())
-        {
-            GameManager.instance.ChangeAbility(role, 1);
-        }
-    }
-
-    public void PreviousAbility(InputAction.CallbackContext context)
-    {
-        if (context.action.WasPerformedThisFrame())
-        {
-            GameManager.instance.ChangeAbility(role, -1);
-        }
-    }
-
     public void UseAbility(InputAction.CallbackContext context)
     {
         if (context.action.WasPerformedThisFrame())
@@ -382,7 +366,7 @@ public class PlayerSystem : MonoBehaviour
             animator.SetBool(type, true);
         }
         catch { }
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.69f);
         try
         {
             animator.SetBool(type, false);
@@ -431,6 +415,7 @@ public class PlayerSystem : MonoBehaviour
     #region Attack
     private void Attack()
     {
+        animator.SetTrigger("Attack");
         if (GameManager.instance.desAbilities == DesAbilitiesEnum.Attack)    //Check if enum is on Attacking
         {
             Vector3 spawnPos = transform.position;
