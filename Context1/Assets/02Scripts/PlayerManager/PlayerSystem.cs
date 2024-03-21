@@ -44,7 +44,7 @@ public class PlayerSystem : MonoBehaviour
     // Jumping
     private bool jumping;
     [SerializeField] private LayerMask groundMask;
-    private float groundDistance = 0.8f;
+    private float groundDistance = 0.1f;
     [SerializeField] private float coyoteTime = 0.1f; // The time the player can still jump after they are no longer grounded
     private float currentCoyoteTime = 0f;
     private bool onCoyoteTime = false;
@@ -419,6 +419,7 @@ public class PlayerSystem : MonoBehaviour
 
     private bool IsGrounded()
     {
+        Debug.DrawRay(transform.position, transform.up * -groundDistance, Color.magenta);
         if (Physics.Raycast(transform.position, transform.up * -1, groundDistance, groundMask))
         {
             return true;
@@ -436,10 +437,12 @@ public class PlayerSystem : MonoBehaviour
             if (spriteRenderer.flipX)
             {
                 spawnPos.x -= 1.3f;
+                spawnPos.y += 0.65f;
             }
             else
             {
                 spawnPos.x += 1.3f;
+                spawnPos.y += 0.65f;
             }
             Instantiate(AttackCloudPrefab, spawnPos, Quaternion.identity, null);
         }
