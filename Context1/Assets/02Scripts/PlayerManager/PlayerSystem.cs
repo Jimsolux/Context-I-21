@@ -319,9 +319,9 @@ public class PlayerSystem : MonoBehaviour
     #endregion
     private void CheckSpecialState()
     {
-        if (Physics.Raycast(transform.position, transform.up * -1, out RaycastHit hit, groundDistance))
+        if (Physics.Raycast(transform.position, transform.up * -1, out RaycastHit hit, groundDistance, groundMask))
         {
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
             if (hit.transform.tag == "StickyStuff")
             {
                 useGravity = false;
@@ -345,7 +345,7 @@ public class PlayerSystem : MonoBehaviour
         }
         else
         {
-            useGravity = true;
+            //useGravity = true;
             slidy = false;
             ballpit = false;
         }
