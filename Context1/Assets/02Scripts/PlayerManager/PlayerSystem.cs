@@ -44,7 +44,7 @@ public class PlayerSystem : MonoBehaviour
     // Jumping
     private bool jumping;
     [SerializeField] private LayerMask groundMask;
-    private float groundDistance = 1.51f;
+    private float groundDistance = 0.8f;
     [SerializeField] private float coyoteTime = 0.1f; // The time the player can still jump after they are no longer grounded
     private float currentCoyoteTime = 0f;
     private bool onCoyoteTime = false;
