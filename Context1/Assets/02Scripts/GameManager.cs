@@ -1,9 +1,7 @@
-using JetBrains.Annotations;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Windows;
 
 public class GameManager : MonoBehaviour
 {
@@ -57,7 +55,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdatePathfinding()
     {
-        foreach(AstarPath p in pathfinders)
+        foreach (AstarPath p in pathfinders)
         {
             p.Scan();
         }
@@ -81,33 +79,37 @@ public class GameManager : MonoBehaviour
             case PlayerRole.Developer:
                 switch (devAbilities)
                 {
-                    case DevAbilitiesEnum.GravitySwap:GravitySwap();
+                    case DevAbilitiesEnum.GravitySwap:
+                        GravitySwap();
                         break;
-                    //case DevAbilitiesEnum.AdjustJump: AdjustJump();
-                    //    break;
-                    //case DevAbilitiesEnum.AdjustSpeed: AdjustSpeed();
-                    //    break;
+                        //case DevAbilitiesEnum.AdjustJump: AdjustJump();
+                        //    break;
+                        //case DevAbilitiesEnum.AdjustSpeed: AdjustSpeed();
+                        //    break;
                 }
 
                 break;
             case PlayerRole.Designer:
                 switch (desAbilities)
                 {
-                    case DesAbilitiesEnum.Jump:;
+                    case DesAbilitiesEnum.Jump:
+                        desAbilities = DesAbilitiesEnum.Attack;
                         break;
-                    case DesAbilitiesEnum.Attack:;
+                    case DesAbilitiesEnum.Attack:
+                        desAbilities = DesAbilitiesEnum.Jump;
+                        ;
                         break;
                 }
                 break;
-           
+
         }
     }
 
     public void ChangeAbility(PlayerRole role, int swapDir)
     {
         int index = 0;
-
-        switch(role)
+        /*
+        switch (role)
         {
             case PlayerRole.Developer:
                 index = (int)devAbilities + swapDir;
@@ -132,23 +134,23 @@ public class GameManager : MonoBehaviour
                 if (index < 0) index = Enum.GetValues(typeof(ArtAbilitiesEnum)).Length - 1; //Min Index reset
                 artAbilities = (ArtAbilitiesEnum)index;// Sets the active desAbility to the index.
                 break;
-        }
+        }*/
     }
 
     public void AddPlayer(PlayerSystem player)
     {
         //try
         //{
-            // The - 1 is due to computer language mumbo jumbo.
-            int activePlayers = inputManager.playerCount - 1;
+        // The - 1 is due to computer language mumbo jumbo.
+        int activePlayers = inputManager.playerCount - 1;
 
-            PlayerRole role = (PlayerRole)activePlayers;
+        PlayerRole role = (PlayerRole)activePlayers;
 
-            player.Setup(role, activePlayers);
+        player.Setup(role, activePlayers);
 
-            connectionScreens[activePlayers].SetActive(false);
+        connectionScreens[activePlayers].SetActive(false);
 
-        
+
         //}
         /*catch (Exception e) {
             Debug.LogError("Player has not been instantiated with the input manager"); 
@@ -175,21 +177,25 @@ public class GameManager : MonoBehaviour
 
         switch (gravityDirection)
         {
-            case GravityDirectionEnum.Down: Physics.gravity = down;
-                targetRotation = Quaternion.Euler(0, 0, 0); 
+            case GravityDirectionEnum.Down:
+                Physics.gravity = down;
+                targetRotation = Quaternion.Euler(0, 0, 0);
                 sidewaysControls = false;
                 break;
-            case GravityDirectionEnum.Left: Physics.gravity = left;
+            case GravityDirectionEnum.Left:
+                Physics.gravity = left;
                 targetRotation = Quaternion.Euler(0, 0, -90);
                 sidewaysControls = true;
 
                 break;
-            case GravityDirectionEnum.Up: Physics.gravity = up;
+            case GravityDirectionEnum.Up:
+                Physics.gravity = up;
                 targetRotation = Quaternion.Euler(0, 0, 180);
                 sidewaysControls = false;
 
                 break;
-            case GravityDirectionEnum.Right: Physics.gravity = right;
+            case GravityDirectionEnum.Right:
+                Physics.gravity = right;
                 targetRotation = Quaternion.Euler(0, 0, 90);
                 sidewaysControls = true;
 
