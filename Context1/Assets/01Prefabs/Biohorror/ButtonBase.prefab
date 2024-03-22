@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonShow: {fileID: 6156096062786227086}
+  triangle: {fileID: 6540938380156540984}
   clicked: 0
 --- !u!1 &4405679165735646349
 GameObject:

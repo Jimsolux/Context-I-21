@@ -186,6 +186,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3023919341780654246, guid: 226f95b839c0e5d44af3c8be5f3a3f4b, type: 3}
+      propertyPath: triangle
+      value: 
+      objectReference: {fileID: 5470338628180801857}
+    - target: {fileID: 3023919341780654246, guid: 226f95b839c0e5d44af3c8be5f3a3f4b, type: 3}
       propertyPath: buttonShow
       value: 
       objectReference: {fileID: 107366207298851585}

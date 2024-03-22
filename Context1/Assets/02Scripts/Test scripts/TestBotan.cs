@@ -9,9 +9,10 @@ public class TestBotan : MonoBehaviour
     Animator anim;
     List<GameObject> inside = new List<GameObject>();
     [SerializeField] private GameObject buttonShow;
-
+    [SerializeField] private GameObject triangle;
     void Start()
     {
+        triangle.transform.rotation = Quaternion.Euler(Vector3.zero);
         buttonShow.SetActive(false);
         anim = GetComponent<Animator>();
         List<Transform> playersInRange = new List<Transform>();

@@ -123,6 +123,7 @@ public class SceneSwitchDebug : MonoBehaviour
         }
         GameManager.instance.UpdatePathfinding();
         UserInterfaceManager.instance.UpdateUI();
+        ButtonController.instance.WipeButtons();
     }
 
     public void RemoveEye(Enemy e)
