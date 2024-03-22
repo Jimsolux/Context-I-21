@@ -32,6 +32,8 @@ public class SceneSwitchDebug : MonoBehaviour
     {
         playGround.SetActive(true);
         bioHorror.SetActive(true);
+
+        RenderSettings.fog = true;
         GameObject[] enemyObjects = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] balloonObjects = GameObject.FindGameObjectsWithTag("Balloon");
 

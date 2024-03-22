@@ -19,6 +19,8 @@ public class StartMenu : MonoBehaviour
         instance = this;
         try { canvasMain.SetActive(true); } // Only activated on game start to prevent a massive UI blob from appearing in editor view
         catch { Debug.LogWarning("No canvas found, please ensure there is always a canvas in the scene. The correct canvas can be found under Prefabs/Display Canvas"); }
+
+        DontDestroyOnLoad(this);
     }
     public void AddPlayer(PlayerSystem player)
     {

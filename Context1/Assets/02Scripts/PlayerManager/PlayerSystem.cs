@@ -54,9 +54,16 @@ public class PlayerSystem : MonoBehaviour
 
     private void Start()
     {
-        targetCamera.parent = null;
+        //targetCamera.parent = null;
         StartMenu.instance.AddPlayer(this);
         buttonController = ButtonController.instance;
+
+        if(GameManager.instance != null)
+        {
+            lastCheckPoint = GameObject.FindGameObjectWithTag("StartCheckPoint").transform;// Sets initial checkpoint
+            UserInterfaceManager.instance.UpdateUI();
+            transform.position = lastCheckPoint.position;
+        }
 
         DontDestroyOnLoad(this);
     }
@@ -377,6 +384,10 @@ public class PlayerSystem : MonoBehaviour
     #region Checkpoint and death
     public void Die()
     {
+        if(lastCheckPoint == null)
+        {
+            lastCheckPoint = GameObject.FindGameObjectWithTag("StartCheckPoint").transform;// Sets initial checkpoint
+        }
         Debug.Log("'insert roblox oof death sound");
         rb.velocity = Vector3.zero;
         transform.position = lastCheckPoint.position;

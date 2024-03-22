@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     private List<AstarPath> pathfinders = new();
 
-
     [Header("Player variables")]
     public float walkSpeed = 5;
     public float runSpeed = 10;
@@ -35,6 +34,13 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        Camera.main.gameObject.SetActive(false);
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach(GameObject g in players)
+        {
+            g.GetComponent<PlayerSystem>().Die();
+        }
+
         playerSpeed = walkSpeed;
         jumpHeight = jumpHeight1;
 
