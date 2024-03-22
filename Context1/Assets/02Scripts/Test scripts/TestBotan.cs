@@ -7,21 +7,18 @@ using static UnityEngine.ParticleSystem;
 public class TestBotan : MonoBehaviour
 {
     Animator anim;
-
-    List<Transform> playersInRange;
-    Transform activePlayer;
-
+    List<GameObject> inside = new List<GameObject>();
+    [SerializeField] private GameObject buttonShow;
 
     void Start()
     {
+        buttonShow.SetActive(false);
         anim = GetComponent<Animator>();
         List<Transform> playersInRange = new List<Transform>();
 
     }
 
     public bool clicked;
-
-
 
     void Update()
     {
@@ -32,6 +29,8 @@ public class TestBotan : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            buttonShow.SetActive(true);
+            inside.Add(other.gameObject);
             PlayerSystem activePlayerSystem = other.GetComponent<PlayerSystem>();
             //activePlayerSystem.canPressButton = true;
             activePlayerSystem.activeButton = this;
@@ -42,6 +41,9 @@ public class TestBotan : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            inside.Remove(other.gameObject);
+            if(inside.Count == 0)
+            buttonShow.SetActive(false);
             PlayerSystem activePlayerSystem = other.GetComponent<PlayerSystem>();
             activePlayerSystem.CheckButtonInteract(false);
            // activePlayerSystem.canPressButton = false;

@@ -19,8 +19,16 @@ public class BalloonFlight : MonoBehaviour
     }
     public void SceneSwap()
     {
-        Vector3 fixedPos = partnerEye.transform.position;
-        fixedPos.z = 0;
-        transform.position = fixedPos;
+        try
+        {
+            Vector3 fixedPos = partnerEye.transform.position;
+            fixedPos.z = 0;
+            transform.position = fixedPos;
+        }
+        catch {
+            Vector3 fixedPos = transform.position;
+            fixedPos.z = 0;
+            transform.position = fixedPos;
+        }
     }
 }
