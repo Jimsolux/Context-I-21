@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class TubeTransparency : MonoBehaviour
@@ -7,7 +8,7 @@ public class TubeTransparency : MonoBehaviour
     {
         Black, Blue, Cyan, Green, Grey, Magenta, Orange, Purple, Red, White, Yellow
     }
-
+    [SerializeField] private bool randomColor = true;
     private Material backMaterial;
     private Material frontMaterial;
 
@@ -15,6 +16,11 @@ public class TubeTransparency : MonoBehaviour
 
     private void Awake()
     {
+        if (randomColor)
+        { int r = UnityEngine.Random.Range(0, 11);
+            color = (TubeColor)r;
+        }
+
         switch (color)
         {
             case TubeColor.Black:
