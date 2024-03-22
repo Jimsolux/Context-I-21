@@ -114,6 +114,11 @@ public class SceneSwitchDebug : MonoBehaviour
                     }
                     catch { }
                 }
+                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+                foreach(GameObject player in players)
+                {
+                    player.GetComponent<PlayerSystem>().RemoveActiveTube(null);
+                }
 
                 foreach (Camera cam in cams)
                 {

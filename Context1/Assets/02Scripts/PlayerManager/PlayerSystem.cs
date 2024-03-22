@@ -82,7 +82,11 @@ public class PlayerSystem : MonoBehaviour
     private bool instantiated = false;
     public void Setup(PlayerRole myRole, int myID)
     {
-        Camera.main.gameObject.SetActive(false);
+        try
+        {
+            Camera.main.gameObject.SetActive(false);
+        }
+        catch { }
         role = myRole;
         ID = myID;
         if (GetComponent<PlayerRoleOverwrite>() != null)
@@ -145,6 +149,7 @@ public class PlayerSystem : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(rb != null)
         rb.useGravity = useGravity;
     }
 
@@ -322,6 +327,9 @@ public class PlayerSystem : MonoBehaviour
 
     public void RemoveActiveTube(TubeTransparency t)
     {
+        if (t == null)
+            activeTube = null;
+
         if (activeTube != null)
         {
             if (activeTube == t)
