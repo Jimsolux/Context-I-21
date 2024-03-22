@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
         {
             pathfinders.Add(g.GetComponent<AstarPath>());
         }
+        UserInterfaceManager.instance.UpdateUI();
     }
 
     public void UpdatePathfinding()

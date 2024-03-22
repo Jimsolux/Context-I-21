@@ -43,6 +43,8 @@ public class SceneSwitchDebug : MonoBehaviour
         bioHorror.SetActive(false);
         currentlyPlayground = true;
 
+        UserInterfaceManager.instance.UpdateUI();
+
         foreach(GameObject cam in cameraObjects)
         {
             cams.Add(cam.GetComponent<Camera>());
