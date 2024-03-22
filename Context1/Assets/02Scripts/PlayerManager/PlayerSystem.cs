@@ -84,7 +84,7 @@ public class PlayerSystem : MonoBehaviour
                 break;
             case PlayerRole.Designer:
                 blend = 0;
-                groundDistance = 0.2f;
+                groundDistance = 0.35f;
                 break;
         }
 

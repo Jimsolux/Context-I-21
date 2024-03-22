@@ -8,8 +8,6 @@ public class TestBotan : MonoBehaviour
 {
     Animator anim;
 
-    List<Transform> playersInRange;
-    Transform activePlayer;
 
 
     void Start()
