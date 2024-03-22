@@ -115,7 +115,7 @@ public class UserInterfaceManager : MonoBehaviour
             #endregion
 
             #region text
-            textButtons.text = currentButtons + " / " + maxButtons;
+            textButtons.text = currentButtons + " / " + maxButtons + " Buttons";
             #endregion
         }
         catch (NullReferenceException e) // De errors die je krijgt als je vergeten bent een waarde te geven aan iets
