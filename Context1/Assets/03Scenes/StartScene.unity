@@ -9532,6 +9532,7 @@ GameObject:
   - component: {fileID: 2053749873}
   - component: {fileID: 2053749872}
   - component: {fileID: 2053749874}
+  - component: {fileID: 2053749875}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9649,6 +9650,18 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!114 &2053749875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053749870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6052b983c0070d740a537814ee8efdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2060370662 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8400591581485199718, guid: dde5c29413d1094438bfbf61a72e5677, type: 3}
@@ -10057,24 +10070,12 @@ PrefabInstance:
       value: 86
       objectReference: {fileID: 0}
     - target: {fileID: 2869591201254586485, guid: 1c54a33f3b7ec134e8f388fc578f5170, type: 3}
-      propertyPath: m_Depth
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869591201254586485, guid: 1c54a33f3b7ec134e8f388fc578f5170, type: 3}
       propertyPath: orthographic
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2869591201254586485, guid: 1c54a33f3b7ec134e8f388fc578f5170, type: 3}
-      propertyPath: m_TargetTexture
-      value: 
-      objectReference: {fileID: 8400000, guid: a5befd167d2cdd241aef6a25f7ba3cd8, type: 2}
-    - target: {fileID: 2869591201254586485, guid: 1c54a33f3b7ec134e8f388fc578f5170, type: 3}
       propertyPath: orthographic size
       value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 2869591201254586485, guid: 1c54a33f3b7ec134e8f388fc578f5170, type: 3}
-      propertyPath: m_CullingMask.m_Bits
-      value: 1023
       objectReference: {fileID: 0}
     - target: {fileID: 3675846598025424685, guid: 1c54a33f3b7ec134e8f388fc578f5170, type: 3}
       propertyPath: m_Name
