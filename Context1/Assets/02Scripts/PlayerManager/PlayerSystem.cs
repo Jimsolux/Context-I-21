@@ -55,12 +55,10 @@ public class PlayerSystem : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log("ola");
         //targetCamera.parent = null;
         StartMenu.instance.AddPlayer(this);
         buttonController = ButtonController.instance;
-        useGravity = true;
-        slidy = false;
-        ballpit = false;
 
         if(GameManager.instance != null)
         {
@@ -72,10 +70,16 @@ public class PlayerSystem : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+    public void SceneSwitch()
+    {
+        useGravity = true;
+        slidy = false;
+        ballpit = false;
+    }
+
     private bool instantiated = false;
     public void Setup(PlayerRole myRole, int myID)
     {
-        Camera.main.gameObject.SetActive(false);
         role = myRole;
         ID = myID;
         if (GetComponent<PlayerRoleOverwrite>() != null)
@@ -396,6 +400,9 @@ public class PlayerSystem : MonoBehaviour
         Debug.Log("'insert roblox oof death sound");
         rb.velocity = Vector3.zero;
         transform.position = lastCheckPoint.position;
+        useGravity = true;
+        slidy = false;
+        ballpit = false;
     }
 
     public void UpdateCheckPoint(Transform checkpoint)

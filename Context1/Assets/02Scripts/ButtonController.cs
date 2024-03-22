@@ -35,7 +35,7 @@ public class ButtonController : MonoBehaviour
     {
         if(buttonsCurrentlyPressed == amountOfButtonsInLevel)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            ChangeSceneWao();
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -45,7 +45,12 @@ public class ButtonController : MonoBehaviour
 
     public void ChangeSceneWao()
     {
-        Debug.Log("uhhh..." + SceneManager.GetActiveScene().buildIndex);
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        foreach(GameObject g in players)
+        {
+            g.GetComponent<PlayerSystem>().SceneSwitch();
+        }
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
