@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour
 {
@@ -17,7 +18,6 @@ public class ButtonController : MonoBehaviour
         instance = this;
     }
 
-    [SerializeField] UnityEvent levelEvent;
     // Amount of buttons pressed in.
     [SerializeField] private int amountOfButtonsInLevel = 3;
     public int buttonsCurrentlyPressed;
@@ -28,14 +28,25 @@ public class ButtonController : MonoBehaviour
         buttonsCurrentlyPressed = 0;
         UpdateButtons(); // starts false
 
+
     }
 
     void FixedUpdate()
     {
         if(buttonsCurrentlyPressed == amountOfButtonsInLevel)
         {
-            levelEvent.Invoke();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ChangeSceneWao();
+        }
+    }
+
+    public void ChangeSceneWao()
+    {
+        Debug.Log("uhhh..." + SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void UpdateButtons()

@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9010320154752689209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1830311720877750300}
+  - component: {fileID: 3079300062795006997}
+  m_Layer: 0
+  m_Name: SceneSwitcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1830311720877750300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9010320154752689209}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.025815824, y: 0.13652559, z: -0.0021594854}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3079300062795006997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9010320154752689209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0270ed9feb953d741ad88494018d7104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playGround: {fileID: 0}
+  bioHorror: {fileID: 0}
+  currentlyPlayground: 0
+  bgColorPlayground: {r: 0.51537913, g: 0.57771325, b: 0.5849056, a: 1}
+  bgColorBiohorror: {r: 0.3207547, g: 0.2438946, b: 0.2438946, a: 1}
+  fogColorPlayground: {r: 1, g: 0.7529412, b: 0.9529412, a: 1}
+  fogColorBiohorror: {r: 0.23137255, g: 0.19607843, b: 0.19607843, a: 1}

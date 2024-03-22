@@ -55,8 +55,10 @@ public class PlayerSystem : MonoBehaviour
     private void Start()
     {
         targetCamera.parent = null;
-        GameManager.instance.AddPlayer(this);
+        StartMenu.instance.AddPlayer(this);
         buttonController = ButtonController.instance;
+
+        DontDestroyOnLoad(this);
     }
 
     private bool instantiated = false;

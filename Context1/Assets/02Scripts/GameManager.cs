@@ -8,11 +8,6 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     private List<AstarPath> pathfinders = new();
 
-    [SerializeField] private PlayerInputManager inputManager;
-
-    [Header("Interface variables")]
-    [SerializeField] private GameObject canvasMain;
-    [SerializeField] private GameObject[] connectionScreens;
 
     [Header("Player variables")]
     public float walkSpeed = 5;
@@ -37,8 +32,6 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        try { canvasMain.SetActive(true); } // Only activated on game start to prevent a massive UI blob from appearing in editor view
-        catch { Debug.LogWarning("No canvas found, please ensure there is always a canvas in the scene. The correct canvas can be found under Prefabs/Display Canvas"); }
     }
     private void Start()
     {
@@ -104,7 +97,6 @@ public class GameManager : MonoBehaviour
 
     public void ChangeAbility(PlayerRole role, int swapDir)
     {
-        int index = 0;
         /*
         switch (role)
         {
@@ -134,27 +126,6 @@ public class GameManager : MonoBehaviour
         }*/
     }
 
-    public void AddPlayer(PlayerSystem player)
-    {
-        //try
-        //{
-        // The - 1 is due to computer language mumbo jumbo.
-        int activePlayers = inputManager.playerCount - 1;
-
-        PlayerRole role = (PlayerRole)activePlayers;
-
-        player.Setup(role, activePlayers);
-
-        connectionScreens[activePlayers].SetActive(false);
-
-
-        //}
-        /*catch (Exception e) {
-            Debug.LogError("Player has not been instantiated with the input manager"); 
-            Debug.LogError("Please do not add player objects to the scene, these get added with the PlayerInputComponent");
-            Debug.LogException(e);
-        }*/
-    }
 
     #region dev abilities
     public GravityDirectionEnum gravityDirection;
