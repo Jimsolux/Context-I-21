@@ -6,24 +6,33 @@ public class AudioManager : MonoBehaviour
 {
     public GameObject sceneSwitcher;
     
-
+    //SFX
     public AudioSource sloppywalk;
     public AudioSource happywalk;
+    public AudioSource balloonPop;
+    public AudioSource eyePop;
+    //Music
     public AudioSource happyMusic;
     public AudioSource spookyMusic;
     Animator playerAnim;
-    
+
+    private bool currentlyPlayground;
 
 
-    void Start()
+
+    void Awake()
     {
-        
-        
+        currentlyPlayground = sceneSwitcher.GetComponent<SceneSwitchDebug>().currentlyPlayground;
+
+    }
+
+    private void FixedUpdate()
+    {
+       currentlyPlayground = sceneSwitcher.GetComponent<SceneSwitchDebug>().currentlyPlayground;
     }
 
     void Update()
     {
-        bool currentlyPlayground = sceneSwitcher.GetComponent<SceneSwitchDebug>().currentlyPlayground;
 
         
         if (currentlyPlayground == true)
@@ -41,7 +50,10 @@ public class AudioManager : MonoBehaviour
     void playgroundAudio()
     {
         //Alvast sorry voor deze code
-        GameObject player = GameObject.FindWithTag("Player");
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        
+        foreach (GameObject player in players)
+        {
         playerAnim = player.GetComponent<Animator>();
         bool walking = playerAnim.GetBool("Walking");
         if ( walking == true)
@@ -52,29 +64,39 @@ public class AudioManager : MonoBehaviour
         {
             happywalk.volume = 0;
         }
+            
+        }
 
         happyMusic.volume = 1 ;
         spookyMusic.volume = 0 ;
-        
-        
     }
 
     void horrorAudio()
     {
         //Alvast sorry voor deze code
-        GameObject player = GameObject.FindWithTag("Player");
-        playerAnim = player.GetComponent<Animator>();
-        bool walking = playerAnim.GetBool("Walking");
-        if (walking == true)
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+
+        foreach (GameObject player in players)
         {
-            sloppywalk.volume = 1;
-        }
-        else
-        {
-            sloppywalk.volume = 0;
+            playerAnim = player.GetComponent<Animator>();
+            bool walking = playerAnim.GetBool("Walking");
+            if (walking == true)
+            {
+                sloppywalk.volume = 1;
+            }
+            else
+            {
+                sloppywalk.volume = 0;
+            }
         }
 
         happyMusic.volume = 0;
         spookyMusic.volume = 1;
+    }
+
+    public void PopSound()
+    {
+        if(currentlyPlayground)  { balloonPop.Play(); }
+        if(!currentlyPlayground) { eyePop.Play(); }
     }
 }

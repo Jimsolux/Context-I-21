@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private Transform target;
     private GameObject[] players;
+    // Audio
+    public AudioManager audioManager;
 
     [SerializeField] private GameObject partnerBalloon;
     [SerializeField] private Transform rotatePivot;
@@ -16,6 +18,9 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         destinationTarget = GetComponent<AIDestinationSetter>();
+
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
     }
 
     private void Update()
@@ -72,6 +77,8 @@ public class Enemy : MonoBehaviour
     {
         SceneSwitchDebug.instance.RemoveEye(this);
         SceneSwitchDebug.instance.RemoveBalloon(partnerBalloon.GetComponent<BalloonFlight>());
+
+        audioManager.PopSound();
 
         Destroy(partnerBalloon);
         Destroy(gameObject);
