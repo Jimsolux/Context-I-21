@@ -18,7 +18,7 @@ public class SceneSwitchDebug : MonoBehaviour
     public GameObject playGround;
     public GameObject bioHorror;
 
-    bool currentlyPlayground;
+    public bool currentlyPlayground;
     private List<Enemy> enemies = new();
     private List<BalloonFlight> balloons = new();
     private List<Camera> cams = new();
@@ -30,6 +30,8 @@ public class SceneSwitchDebug : MonoBehaviour
 
     private void Start()
     {
+        playGround.SetActive(true);
+        bioHorror.SetActive(true);
         GameObject[] enemyObjects = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] balloonObjects = GameObject.FindGameObjectsWithTag("Balloon");
 
@@ -118,6 +120,7 @@ public class SceneSwitchDebug : MonoBehaviour
                 break;
         }
         GameManager.instance.UpdatePathfinding();
+        UserInterfaceManager.instance.UpdateUI();
     }
 
     public void RemoveEye(Enemy e)

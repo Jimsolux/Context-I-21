@@ -63,10 +63,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (UnityEngine.Input.GetKeyDown(KeyCode.Escape))
-        {
-            GravitySwap();
-        }
     }
 
     public void UseAbility(PlayerRole role)

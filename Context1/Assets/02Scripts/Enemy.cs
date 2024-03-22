@@ -52,7 +52,6 @@ public class Enemy : MonoBehaviour
             {
                 target.GetComponent<PlayerSystem>().Die();
             }
-            Debug.Log(Vector3.Distance(transform.position, target.position));
 
             Vector3 rotationV3 = rotatePivot.rotation.eulerAngles;
             rotationV3.x += 90;
