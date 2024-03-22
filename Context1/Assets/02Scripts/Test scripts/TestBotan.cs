@@ -12,7 +12,6 @@ public class TestBotan : MonoBehaviour
     [SerializeField] private GameObject triangle;
     void Start()
     {
-        triangle.transform.rotation = Quaternion.Euler(Vector3.zero);
         buttonShow.SetActive(false);
         anim = GetComponent<Animator>();
         List<Transform> playersInRange = new List<Transform>();
@@ -23,6 +22,8 @@ public class TestBotan : MonoBehaviour
 
     void Update()
     {
+        if(triangle.transform.localRotation.eulerAngles != Vector3.zero)
+            triangle.transform.localRotation = Quaternion.Euler(Vector3.zero);
         anim.SetBool("Pressed", clicked);
     }
 
