@@ -16,6 +16,7 @@ public class PlayerSystem : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool canUseAbility = true;
     [SerializeField] private float abilityCooldown = 0.2f;
+    [SerializeField] GravityCheck gravityCheck;
 
     // physics stuff
     private Rigidbody rb;
@@ -423,6 +424,7 @@ public class PlayerSystem : MonoBehaviour
         else
         {
             currentCoyoteTime -= Time.deltaTime;
+            currentCoyoteTime = Mathf.Clamp(currentCoyoteTime, 0, coyoteTime);
         }
         if (currentCoyoteTime > 0) onCoyoteTime = true;
         else onCoyoteTime = false;
@@ -430,12 +432,7 @@ public class PlayerSystem : MonoBehaviour
 
     private bool IsGrounded()
     {
-        Debug.DrawRay(transform.position, transform.up * -groundDistance, Color.magenta);
-        if (Physics.Raycast(transform.position, transform.up * -1, groundDistance, groundMask))
-        {
-            return true;
-        }
-        return false;
+        return gravityCheck.value;
     }
     #endregion
 
