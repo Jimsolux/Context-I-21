@@ -358,7 +358,7 @@ public class PlayerSystem : MonoBehaviour
 
         // wanneer je de stickiness check freezed, wil je altijd gravity gebruiken
         if (freezeStickiness) useGravity = true;
-    }
+    }   //Gravity Negation etc.
 
     private IEnumerator AnimatorPlayOnce(string type)
     {
