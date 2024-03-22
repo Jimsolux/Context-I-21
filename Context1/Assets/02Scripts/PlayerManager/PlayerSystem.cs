@@ -155,15 +155,59 @@ public class PlayerSystem : MonoBehaviour
                 animator.SetBool("Walking", false);
             else
             {
-                if (direction.x < 0)
+                switch (GameManager.instance.gravityDirection)
                 {
-                    if (!spriteRenderer.flipX)
-                        spriteRenderer.flipX = true;
-                }
-                else
-                {
-                    if (spriteRenderer.flipX)
-                        spriteRenderer.flipX = false;
+                    case GravityDirectionEnum.Down:
+                        if (direction.x < 0)
+                        {
+                            if (!spriteRenderer.flipX)
+                                spriteRenderer.flipX = true;
+                        }
+                        else
+                        {
+                            if (spriteRenderer.flipX)
+                                spriteRenderer.flipX = false;
+                        }
+                        break;
+
+                    case GravityDirectionEnum.Up:
+                        if (direction.x > 0)
+                        {
+                            if (!spriteRenderer.flipX)
+                                spriteRenderer.flipX = true;
+                        }
+                        else
+                        {
+                            if (spriteRenderer.flipX)
+                                spriteRenderer.flipX = false;
+                        }
+                        break;
+
+                    case GravityDirectionEnum.Left:
+                        if (direction.y > 0)
+                        {
+                            if (!spriteRenderer.flipX)
+                                spriteRenderer.flipX = true;
+                        }
+                        else
+                        {
+                            if (spriteRenderer.flipX)
+                                spriteRenderer.flipX = false;
+                        }
+                        break;
+
+                    case GravityDirectionEnum.Right:
+                        if (direction.y < 0)
+                        {
+                            if (!spriteRenderer.flipX)
+                                spriteRenderer.flipX = true;
+                        }
+                        else
+                        {
+                            if (spriteRenderer.flipX)
+                                spriteRenderer.flipX = false;
+                        }
+                        break;
                 }
                 animator.SetBool("Walking", true);
             }
@@ -445,15 +489,56 @@ public class PlayerSystem : MonoBehaviour
             if (GameManager.instance.desAbilities == DesAbilitiesEnum.Attack)    //Check if enum is on Attacking
             {
                 Vector3 spawnPos = transform.position;
-                if (spriteRenderer.flipX)
+                switch (GameManager.instance.gravityDirection)
                 {
-                    spawnPos.x -= 1.3f;
-                    spawnPos.y += 0.65f;
-                }
-                else
-                {
-                    spawnPos.x += 1.3f;
-                    spawnPos.y += 0.65f;
+                    case GravityDirectionEnum.Down:
+                        if (spriteRenderer.flipX)
+                        {
+                            spawnPos.x -= 1.3f;
+                            spawnPos.y += 0.65f;
+                        }
+                        else
+                        {
+                            spawnPos.x += 1.3f;
+                            spawnPos.y += 0.65f;
+                        }
+                        break;
+                    case GravityDirectionEnum.Up:
+                        if (spriteRenderer.flipX)
+                        {
+                            spawnPos.x += 1.3f;
+                            spawnPos.y -= 0.65f;
+                        }
+                        else
+                        {
+                            spawnPos.x -= 1.3f;
+                            spawnPos.y -= 0.65f;
+                        }
+                        break;
+                    case GravityDirectionEnum.Left:
+                        if (spriteRenderer.flipX)
+                        {
+                            spawnPos.y += 1.3f;
+                            spawnPos.x += 0.65f;
+                        }
+                        else
+                        {
+                            spawnPos.y -= 1.3f;
+                            spawnPos.x += 0.65f;
+                        }
+                        break;
+                    case GravityDirectionEnum.Right:
+                        if (spriteRenderer.flipX)
+                        {
+                            spawnPos.y -= 1.3f;
+                            spawnPos.x -= 0.65f;
+                        }
+                        else
+                        {
+                            spawnPos.y += 1.3f;
+                            spawnPos.x -= 0.65f;
+                        }
+                        break;
                 }
                 Instantiate(AttackCloudPrefab, spawnPos, Quaternion.identity, null);
             }

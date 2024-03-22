@@ -5864,7 +5864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8659389646591853521, guid: a130c4041d54765498d4f9fe24275243, type: 3}
       propertyPath: desAbilities
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8659389646591853521, guid: a130c4041d54765498d4f9fe24275243, type: 3}
       propertyPath: sceneSwitcher

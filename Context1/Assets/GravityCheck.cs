@@ -4,14 +4,24 @@ using UnityEngine;
 
 public class GravityCheck : MonoBehaviour
 {
+    GameObject curFloor = null;
     public bool value;
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 3)
+        if(other.gameObject.layer == 3)
         {
+            curFloor = other.gameObject;
             value = true;
         }
-        else
-            value = false;
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if(curFloor != null)
+        {
+            if(other.gameObject == curFloor)
+            {
+                value = false;
+            }
+        }
     }
 }
