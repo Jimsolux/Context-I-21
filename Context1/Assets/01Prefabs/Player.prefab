@@ -353,6 +353,7 @@ MonoBehaviour:
   colliderArtist: {fileID: 2746624853639968573}
   colliderDeveloper: {fileID: 3876901191556149217}
   colliderDesigner: {fileID: 1277137235079569598}
+  abilityCooldown: 0.2
   rotateSpeed: 200
   interactSphereRadius: 100
   interactDistance: 0

@@ -14,6 +14,8 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField] private CapsuleCollider colliderDesigner;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private bool canUseAbility = true;
+    [SerializeField] private float abilityCooldown = 0.2f;
 
     // physics stuff
     private Rigidbody rb;
@@ -290,12 +292,19 @@ public class PlayerSystem : MonoBehaviour
     {
         if (context.action.WasPerformedThisFrame())
         {
-            if (instantiated)
+            if (instantiated && canUseAbility)
             {
+                StartCoroutine(AbilityCooldown());
                 StartCoroutine(AnimatorPlayOnce("Special"));
                 GameManager.instance.UseAbility(role);
             }
         }
+    }
+    private IEnumerator AbilityCooldown()
+    {
+        canUseAbility = false;
+        yield return new WaitForSeconds(abilityCooldown);
+        canUseAbility = true;
     }
 
     public void ClickButton(InputAction.CallbackContext context)
