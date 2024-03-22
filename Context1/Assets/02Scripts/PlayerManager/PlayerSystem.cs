@@ -369,7 +369,8 @@ public class PlayerSystem : MonoBehaviour
         }
         else
         {
-            //useGravity = true;
+            if(!IsGrounded())
+                useGravity = true;
             slidy = false;
             ballpit = false;
         }
@@ -440,21 +441,24 @@ public class PlayerSystem : MonoBehaviour
     #region Attack
     private void Attack()
     {
-        animator.SetTrigger("Attack");
-        if (GameManager.instance.desAbilities == DesAbilitiesEnum.Attack)    //Check if enum is on Attacking
+        if (instantiated)
         {
-            Vector3 spawnPos = transform.position;
-            if (spriteRenderer.flipX)
+            animator.SetTrigger("Attack");
+            if (GameManager.instance.desAbilities == DesAbilitiesEnum.Attack)    //Check if enum is on Attacking
             {
-                spawnPos.x -= 1.3f;
-                spawnPos.y += 0.65f;
+                Vector3 spawnPos = transform.position;
+                if (spriteRenderer.flipX)
+                {
+                    spawnPos.x -= 1.3f;
+                    spawnPos.y += 0.65f;
+                }
+                else
+                {
+                    spawnPos.x += 1.3f;
+                    spawnPos.y += 0.65f;
+                }
+                Instantiate(AttackCloudPrefab, spawnPos, Quaternion.identity, null);
             }
-            else
-            {
-                spawnPos.x += 1.3f;
-                spawnPos.y += 0.65f;
-            }
-            Instantiate(AttackCloudPrefab, spawnPos, Quaternion.identity, null);
         }
     }
 
