@@ -33,6 +33,7 @@ public class SceneSwitchDebug : MonoBehaviour
         playGround.SetActive(true);
         bioHorror.SetActive(true);
 
+        RenderSettings.fogDensity = 0.005f;
         RenderSettings.fog = true;
         GameObject[] enemyObjects = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject[] balloonObjects = GameObject.FindGameObjectsWithTag("Balloon");
@@ -42,6 +43,7 @@ public class SceneSwitchDebug : MonoBehaviour
         playGround.SetActive(true);
         bioHorror.SetActive(false);
         currentlyPlayground = true;
+        RenderSettings.fogColor = fogColorPlayground;
 
         UserInterfaceManager.instance.UpdateUI();
 
@@ -96,7 +98,7 @@ public class SceneSwitchDebug : MonoBehaviour
                     cam.backgroundColor = bgColorPlayground;
                 }
                 RenderSettings.fogColor = fogColorPlayground;
-                RenderSettings.fogDensity = .005f;
+                RenderSettings.fogDensity = 0.005f;
 
                 currentlyPlayground =true; 
                 break;
