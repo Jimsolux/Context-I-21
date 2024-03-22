@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -57,6 +58,9 @@ public class PlayerSystem : MonoBehaviour
         //targetCamera.parent = null;
         StartMenu.instance.AddPlayer(this);
         buttonController = ButtonController.instance;
+        useGravity = true;
+        slidy = false;
+        ballpit = false;
 
         if(GameManager.instance != null)
         {
@@ -71,6 +75,7 @@ public class PlayerSystem : MonoBehaviour
     private bool instantiated = false;
     public void Setup(PlayerRole myRole, int myID)
     {
+        Camera.main.gameObject.SetActive(false);
         role = myRole;
         ID = myID;
         if (GetComponent<PlayerRoleOverwrite>() != null)
