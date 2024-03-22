@@ -84,6 +84,31 @@ public class UserInterfaceManager : MonoBehaviour
                         else
                             abilities.playerIcons[i].sprite = abilities.biohorrorIcon;
                         break;
+
+                    case PlayerRole.Designer:
+                        if(manager.desAbilities == DesAbilitiesEnum.Attack)
+                            abilities.playerIcons[i].sprite = abilities.attackIcon;
+                        else
+                            abilities.playerIcons[i].sprite = abilities.jumpIcon;
+                        break;
+
+                    case PlayerRole.Developer:
+                        switch (manager.gravityDirection)
+                        {
+                            case GravityDirectionEnum.Down:
+                                abilities.playerIcons[i].sprite = abilities.gravityDownIcon;
+                                break;
+                            case GravityDirectionEnum.Left:
+                                abilities.playerIcons[i].sprite = abilities.gravityLeftIcon;
+                                break;
+                            case GravityDirectionEnum.Up:
+                                abilities.playerIcons[i].sprite = abilities.gravityUpIcon;
+                                break;
+                            case GravityDirectionEnum.Right:
+                                abilities.playerIcons[i].sprite = abilities.gravityRightIcon;
+                                break;
+                        }
+                        break;
                 }
             }
 

@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
                         //case DevAbilitiesEnum.AdjustSpeed: AdjustSpeed();
                         //    break;
                 }
-
+                UserInterfaceManager.instance.UpdateUI();
                 break;
             case PlayerRole.Designer:
                 switch (desAbilities)
@@ -96,6 +96,7 @@ public class GameManager : MonoBehaviour
                         ;
                         break;
                 }
+                UserInterfaceManager.instance.UpdateUI();
                 break;
 
         }
