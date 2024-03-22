@@ -384,6 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonShow: {fileID: 4617692499963652679}
+  triangle: {fileID: 7505501059080355029}
   clicked: 0
 --- !u!65 &7108576952178206034
 BoxCollider:

@@ -49,29 +49,39 @@ public class ButtonController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void WipeButtons()
+    {
+        isPressedInts = new int[3];
+    }
+
+    int currentlyClicked = 0;
     public void UpdateButtons()
     {
         //try
         //{
             GameObject[] buttons = GameObject.FindGameObjectsWithTag("Button");// Makes Array with all active buttons
-            //Debug.Log(buttons.Length);
+            Debug.Log(buttons.Length);
+        currentlyClicked = 0;
             for (int i = 0; i < buttons.Count(); i++)
             {
                 TestBotan buttonthing = buttons[i].GetComponent<TestBotan>(); // instance of that ButtonController
                 int myInt = Convert.ToInt32(buttonthing.clicked);
-                isPressedInts[i] = myInt;
+            Debug.Log(myInt);
+            if (myInt == 1)
+                currentlyClicked++;
                 //Debug.Log(buttonthing.clicked);
             }
 
-            buttonsCurrentlyPressed = isPressedInts[0] + isPressedInts[1] + isPressedInts[2];
-        //}
-        //catch (Exception e)
-        //{
+        if (currentlyClicked == 3) ChangeSceneWao();
+            //buttonsCurrentlyPressed = isPressedInts[0] + isPressedInts[1] + isPressedInts[2];
+            //}
+            //catch (Exception e)
+            //{
             //buttonsCurrentlyPressed = 0;
             //Debug.Log("Couldnt properly update buttons");
-        //}
+            //}
 
-        UserInterfaceManager.instance.UpdateButtonCount(buttonsCurrentlyPressed, amountOfButtonsInLevel);
+        UserInterfaceManager.instance.UpdateButtonCount(currentlyClicked, amountOfButtonsInLevel);
         //Debug.Log(buttonsCurrentlyPressed);
     }
 

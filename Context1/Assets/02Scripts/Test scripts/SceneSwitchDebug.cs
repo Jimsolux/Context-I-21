@@ -43,6 +43,8 @@ public class SceneSwitchDebug : MonoBehaviour
         bioHorror.SetActive(false);
         currentlyPlayground = true;
 
+        UserInterfaceManager.instance.UpdateUI();
+
         foreach(GameObject cam in cameraObjects)
         {
             cams.Add(cam.GetComponent<Camera>());
@@ -123,6 +125,7 @@ public class SceneSwitchDebug : MonoBehaviour
         }
         GameManager.instance.UpdatePathfinding();
         UserInterfaceManager.instance.UpdateUI();
+        ButtonController.instance.WipeButtons();
     }
 
     public void RemoveEye(Enemy e)

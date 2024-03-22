@@ -9,7 +9,7 @@ public class TestBotan : MonoBehaviour
     Animator anim;
     List<GameObject> inside = new List<GameObject>();
     [SerializeField] private GameObject buttonShow;
-
+    [SerializeField] private GameObject triangle;
     void Start()
     {
         buttonShow.SetActive(false);
@@ -22,6 +22,8 @@ public class TestBotan : MonoBehaviour
 
     void Update()
     {
+        if(triangle.transform.localRotation.eulerAngles != Vector3.zero)
+            triangle.transform.localRotation = Quaternion.Euler(Vector3.zero);
         anim.SetBool("Pressed", clicked);
     }
 
