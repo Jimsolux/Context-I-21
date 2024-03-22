@@ -72,6 +72,13 @@ public class PlayerSystem : MonoBehaviour
         DontDestroyOnLoad(this);
     }
 
+    public void SceneSwitch()
+    {
+        useGravity = true;
+        slidy = false;
+        ballpit = false;
+    }
+
     private bool instantiated = false;
     public void Setup(PlayerRole myRole, int myID)
     {

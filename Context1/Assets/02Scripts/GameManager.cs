@@ -36,12 +36,14 @@ public class GameManager : MonoBehaviour
     {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
 
-        if(players.Length > 0)
+        if (players.Length > 0)
             Camera.main.gameObject.SetActive(false);
+     
 
         foreach (GameObject g in players)
         {
             g.GetComponent<PlayerSystem>().Die();
+            g.GetComponent<PlayerSystem>().SceneSwitch();
         }
 
         playerSpeed = walkSpeed;
