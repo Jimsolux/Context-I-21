@@ -34,9 +34,12 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        Camera.main.gameObject.SetActive(false);
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        foreach(GameObject g in players)
+
+        if(players.Length > 0)
+            Camera.main.gameObject.SetActive(false);
+
+        foreach (GameObject g in players)
         {
             g.GetComponent<PlayerSystem>().Die();
         }
