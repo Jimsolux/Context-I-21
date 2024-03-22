@@ -14,6 +14,8 @@ public class PlayerSystem : MonoBehaviour
     [SerializeField] private CapsuleCollider colliderDesigner;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
+    private bool canUseAbility = true;
+    [SerializeField] private float abilityCooldown = 0.2f;
 
     // physics stuff
     private Rigidbody rb;
@@ -56,9 +58,9 @@ public class PlayerSystem : MonoBehaviour
         buttonController = ButtonController.instance;
     }
 
+    private bool instantiated = false;
     public void Setup(PlayerRole myRole, int myID)
     {
-        Debug.Log("New player connected; " + role + ", with ID " + ID);
         role = myRole;
         ID = myID;
         if (GetComponent<PlayerRoleOverwrite>() != null)
@@ -114,7 +116,8 @@ public class PlayerSystem : MonoBehaviour
         }
 
         lastCheckPoint = GameObject.FindGameObjectWithTag("StartCheckPoint").transform;// Sets initial checkpoint
-
+        UserInterfaceManager.instance.UpdateUI();
+        instantiated = true;
     }
 
     private void FixedUpdate()
@@ -140,8 +143,10 @@ public class PlayerSystem : MonoBehaviour
     #region movement
     public void OnMovement(InputAction.CallbackContext context)
     {
-        direction = context.ReadValue<Vector2>();
-
+        if (instantiated)
+        {
+            direction = context.ReadValue<Vector2>();
+        }
         if (animator != null)
         {
             if (direction == Vector2.zero)
@@ -161,10 +166,11 @@ public class PlayerSystem : MonoBehaviour
                 animator.SetBool("Walking", true);
             }
         }
+
     }
 
     bool storedSideways = false;
-    Vector3 storedDir = Vector3.zero; 
+    Vector3 storedDir = Vector3.zero;
     float iceSpeed = 0;
     private void UpdatePosition()
     {
@@ -221,7 +227,7 @@ public class PlayerSystem : MonoBehaviour
 
             transform.position += v3Dir * speed * Time.deltaTime;
         }
-        if(direction == Vector2.zero)
+        if (direction == Vector2.zero)
         {
             transform.position += storedDir * iceSpeed * Time.deltaTime;
         }
@@ -263,18 +269,21 @@ public class PlayerSystem : MonoBehaviour
     {
         if (context.action.WasPressedThisFrame())
         {
-            switch (GameManager.instance.desAbilities)
+            if (instantiated)
             {
-                case DesAbilitiesEnum.Jump:
-                    Jump();
-                    break;
-                case DesAbilitiesEnum.Attack:
-                    Debug.Log("Switched to Attack");
-                    Attack();
-                    break;
-                    //case DesAbilitiesEnum.Interact:
-                    //    DesInteract();
-                    //    break;
+                switch (GameManager.instance.desAbilities)
+                {
+                    case DesAbilitiesEnum.Jump:
+                        Jump();
+                        break;
+                    case DesAbilitiesEnum.Attack:
+                        Debug.Log("Switched to Attack");
+                        Attack();
+                        break;
+                        //case DesAbilitiesEnum.Interact:
+                        //    DesInteract();
+                        //    break;
+                }
             }
         }
     }
@@ -283,22 +292,37 @@ public class PlayerSystem : MonoBehaviour
     {
         if (context.action.WasPerformedThisFrame())
         {
-            StartCoroutine(AnimatorPlayOnce("Special"));
-            GameManager.instance.UseAbility(role);
+            if (instantiated && canUseAbility)
+            {
+                StartCoroutine(AbilityCooldown());
+                StartCoroutine(AnimatorPlayOnce("Special"));
+                GameManager.instance.UseAbility(role);
+            }
         }
+    }
+    private IEnumerator AbilityCooldown()
+    {
+        canUseAbility = false;
+        yield return new WaitForSeconds(abilityCooldown);
+        canUseAbility = true;
     }
 
     public void ClickButton(InputAction.CallbackContext context)
     {
         if (context.action.WasPerformedThisFrame())
         {
-            CheckButtonInteract(true);
+            if (instantiated)
+            {
+                CheckButtonInteract(true);
+            }
         }
         if (context.action.WasReleasedThisFrame())
         {
-            CheckButtonInteract(false);
+            if (instantiated)
+            {
+                CheckButtonInteract(false);
+            }
         }
-
     }
 
     #endregion
@@ -453,5 +477,9 @@ public class PlayerSystem : MonoBehaviour
 
     #endregion
 
+    public PlayerRole GetRole()
+    {
+        return role;
+    }
 
 }
