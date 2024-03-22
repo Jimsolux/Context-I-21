@@ -49,5 +49,5 @@ MonoBehaviour:
   currentlyPlayground: 0
   bgColorPlayground: {r: 0.51537913, g: 0.57771325, b: 0.5849056, a: 1}
   bgColorBiohorror: {r: 0.3207547, g: 0.2438946, b: 0.2438946, a: 1}
-  fogColorPlayground: {r: 1, g: 0.7529412, b: 0.9529412, a: 1}
+  fogColorPlayground: {r: 1, g: 0.101960786, b: 0.8156863, a: 1}
   fogColorBiohorror: {r: 0.23137255, g: 0.19607843, b: 0.19607843, a: 1}
