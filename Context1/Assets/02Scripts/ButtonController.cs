@@ -65,13 +65,13 @@ public class ButtonController : MonoBehaviour
         //try
         //{
             GameObject[] buttons = GameObject.FindGameObjectsWithTag("Button");// Makes Array with all active buttons
-            Debug.Log(buttons.Length);
+            //Debug.Log(buttons.Length);
         currentlyClicked = 0;
             for (int i = 0; i < buttons.Count(); i++)
             {
                 TestBotan buttonthing = buttons[i].GetComponent<TestBotan>(); // instance of that ButtonController
                 int myInt = Convert.ToInt32(buttonthing.clicked);
-            Debug.Log(myInt);
+            //Debug.Log(myInt);
             if (myInt == 1)
                 currentlyClicked++;
                 //Debug.Log(buttonthing.clicked);
@@ -87,7 +87,7 @@ public class ButtonController : MonoBehaviour
             //}
 
         UserInterfaceManager.instance.UpdateButtonCount(currentlyClicked, amountOfButtonsInLevel);
-        //Debug.Log(buttonsCurrentlyPressed);
+        //Debug.Log(buttonsCurrentlyPressed + " is the buttons pressed rn");
     }
 
 

@@ -84,7 +84,7 @@ public class AudioManager : MonoBehaviour
 
         }
 
-        happyMusic.volume = .2f;
+        happyMusic.volume = 0f;
         spookyMusic.volume = 0;
     }
 
@@ -118,7 +118,7 @@ public class AudioManager : MonoBehaviour
         }
 
         happyMusic.volume = 0;
-        spookyMusic.volume = .2f;
+        spookyMusic.volume = 0f;
     }
 
     public void PopSound()
